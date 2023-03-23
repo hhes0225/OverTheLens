@@ -40,3 +40,9 @@ By the deadline, the README should include:
 - A link to a YouTube video demonstration of your game (~2min)
 - Sources of any third party assets/code
 - Optionally, a link to a playable WebGL build of your game, hosted on GitHub PagesClick
+
+## Reflections
+
+In your PDF hand-in, include **~2 pages** (one page is 2400 characters,including spaces) per group member of individual reflections on your contributions to the project.
+
+Being **concrete** and referencing **specific** code sections is highly encouraged (as are using figures and illustrations, but neither code snippets, figures or illustrations count towards the page limit).
