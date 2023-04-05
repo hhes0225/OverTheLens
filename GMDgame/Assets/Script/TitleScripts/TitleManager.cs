@@ -20,12 +20,14 @@ public class TitleManager : MonoBehaviour
 
     private void Awake()
     {
-        settingWindow.SetActive(false);
+        settingWindow.SetActive(true);
+        
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        settingWindow.SetActive(false);
         startButton.onClick.AddListener((startButtonEvent));
         exitButton.onClick.AddListener((exitButtonEvent));
         settingButton.onClick.AddListener((settingButtonEvent));
