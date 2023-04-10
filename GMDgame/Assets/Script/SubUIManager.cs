@@ -33,18 +33,21 @@ public class SubUIManager : MonoBehaviour
 
     void okButtonEvent()
     {
+        Time.timeScale = 1;
         settingWindow.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     void resumeButtonEvent()
     {
+        Time.timeScale = 1;
         homeWindow.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     void quitButtonEvent()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 }

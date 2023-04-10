@@ -21,6 +21,8 @@ public class UIMananger : MonoBehaviour
 
     private void Awake()
     {
+        //to initialize time(not paused)
+        Time.timeScale = 1;
         //To apply the volume setting
         settingWindow.SetActive(true);
     }
@@ -28,6 +30,7 @@ public class UIMananger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         Invoke("settingWindowOff", 0.01f);
         homeWindow.SetActive(false);
 
@@ -39,11 +42,13 @@ public class UIMananger : MonoBehaviour
 
     void settingButtonEvent()
     {
+        Time.timeScale = 0;         //if player click UI button, then game will be paused 
         settingWindow.SetActive(true);
     }
 
     void homeButtonEvent()
     {
+        Time.timeScale = 0;         //if player click UI button, then game will be paused 
         homeWindow.SetActive(true);
     }
 
