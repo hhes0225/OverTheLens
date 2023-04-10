@@ -1530,7 +1530,7 @@ MonoBehaviour:
   exitButton: {fileID: 1300021448}
   settingButton: {fileID: 1998224421}
   settingWindow: {fileID: 1932528296}
-  fadeEffectPanel: {fileID: 0}
+  fadeEffectPanel: {fileID: 1929904242}
 --- !u!1 &1300021446
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,6 +2698,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896597376}
   m_CullTransparentMesh: 1
+--- !u!1 &1929904242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7526955183675936480, guid: d9115508ff4514447b2949e5685f78ec, type: 3}
+  m_PrefabInstance: {fileID: 845465573}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1932528296
 GameObject:
   m_ObjectHideFlags: 0
