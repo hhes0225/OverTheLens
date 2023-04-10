@@ -21,6 +21,9 @@ public class SubUIManager : MonoBehaviour
     [SerializeField]
     private Button quitButton;
 
+    [SerializeField]
+    private GameObject fadeEffectPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +51,12 @@ public class SubUIManager : MonoBehaviour
     void quitButtonEvent()
     {
         Time.timeScale = 1;
+        fadeEffectPanel.GetComponent<TransitionEffect>().FadeOut();
+        Invoke("titleSceneLoader", 1f); 
+    }
+
+    void titleSceneLoader()
+    {
         SceneManager.LoadScene(0);
     }
 }

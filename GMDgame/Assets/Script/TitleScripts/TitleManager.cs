@@ -18,10 +18,14 @@ public class TitleManager : MonoBehaviour
     [SerializeField]
     private GameObject settingWindow;
 
+    [SerializeField]
+    private GameObject fadeEffectPanel;
+
     private void Awake()
     {
         //To apply the volume setting
         settingWindow.SetActive(true);
+        fadeEffectPanel.SetActive(true);
     }
 
     // Start is called before the first frame update
@@ -32,11 +36,14 @@ public class TitleManager : MonoBehaviour
         startButton.onClick.AddListener((startButtonEvent));
         exitButton.onClick.AddListener((exitButtonEvent));
         settingButton.onClick.AddListener((settingButtonEvent));
+
     }
 
     void startButtonEvent()
     {
-        SceneManager.LoadScene(1);
+        
+        fadeEffectPanel.GetComponent<TransitionEffect>().FadeOut();
+        Invoke("gameSceneLoader", 1f);
     }
 
     void exitButtonEvent()
@@ -52,6 +59,11 @@ public class TitleManager : MonoBehaviour
     void settingWindowOff()
     {
         settingWindow.SetActive(false);
+    }
+
+    void gameSceneLoader()
+    {
+        SceneManager.LoadScene(1);
     }
 
 }
