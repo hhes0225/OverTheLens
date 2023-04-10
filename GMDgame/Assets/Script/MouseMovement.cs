@@ -33,7 +33,11 @@ namespace Script
  
             // applying both rotations
             transform.localRotation = Quaternion.Euler(_xRotation, _yRotation, 0f);
- 
+
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }
         }
     }
 }

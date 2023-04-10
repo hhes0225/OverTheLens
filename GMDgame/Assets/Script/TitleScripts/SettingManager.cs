@@ -15,6 +15,7 @@ public class SettingManager : MonoBehaviour
     void Start()
     {
         okButton.onClick.AddListener((okButtonEvent));
+
     }
 
 
