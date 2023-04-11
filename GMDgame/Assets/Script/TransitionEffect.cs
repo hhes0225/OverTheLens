@@ -10,6 +10,20 @@ public class TransitionEffect : MonoBehaviour
     float time = 0f;
     float F_time = 1f;
 
+    void Awake()
+    {
+        EffectPanel = this.gameObject; //this object is fade in/out effect panel
+        image = EffectPanel.GetComponent<Image>(); //panel object's image component
+        Color color = image.color;
+        color.a = 1f;
+        image.color = color;
+    }
+
+    private void Start()
+    {
+        FadeIn();
+    }
+
     //after load scene, fade in called
     public void FadeIn()
     {
@@ -20,7 +34,8 @@ public class TransitionEffect : MonoBehaviour
     //before load scene, fade out called, then scene is loaded
     public void FadeOut()
     {
-        EffectPanel.SetActive(true);
+        //Debug.Log(this.gameObject.name);
+        this.gameObject.SetActive(true);
         StartCoroutine(FadeOutEffect());
     }
 
@@ -61,17 +76,5 @@ public class TransitionEffect : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
     }
 
-    void Awake()
-    {
-        EffectPanel = this.gameObject; //this object is fade in/out effect panel
-        image = EffectPanel.GetComponent<Image>(); //panel object's image component
-        Color color = image.color;
-        color.a = 1f;
-        image.color = color;
-    }
-
-    private void Start()
-    {
-        FadeIn();
-    }
+    
 }

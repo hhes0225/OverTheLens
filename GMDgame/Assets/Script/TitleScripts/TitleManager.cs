@@ -43,7 +43,7 @@ public class TitleManager : MonoBehaviour
     {
         
         fadeEffectPanel.GetComponent<TransitionEffect>().FadeOut();
-        Invoke("gameSceneLoader", 1f);
+        Invoke("nextSceneLoader", 1f);
     }
 
     void exitButtonEvent()
@@ -61,7 +61,7 @@ public class TitleManager : MonoBehaviour
         settingWindow.SetActive(false);
     }
 
-    void gameSceneLoader()
+    void nextSceneLoader()
     {
         SceneManager.LoadScene(1);
     }
