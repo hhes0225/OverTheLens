@@ -27,7 +27,7 @@ public class TransitionEffect : MonoBehaviour
     //after load scene, fade in called
     public void FadeIn()
     {
-        Debug.Log("FadeIN called");
+        //Debug.Log("FadeIN called");
         StartCoroutine(FadeInEffect());
     }
 
