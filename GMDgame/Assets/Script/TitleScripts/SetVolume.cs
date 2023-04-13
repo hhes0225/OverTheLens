@@ -8,11 +8,13 @@ public class SetVolume : MonoBehaviour
 {
     public AudioMixer mixer;
     public Slider slider;
+    bool ifChanged = false;
 
     void Start()
     {
         //initiate volume value
-        slider.value = PlayerPrefs.GetFloat("MusicVolume", 0.75f);
+        if(!ifChanged)
+           slider.value = PlayerPrefs.GetFloat("MusicVolume", 0.75f);
     }
 
     //This function will be automatically called when player change volume
@@ -21,6 +23,7 @@ public class SetVolume : MonoBehaviour
         //float sound 
         mixer.SetFloat("MusicVolume", Mathf.Log10(sliderValue) * 20);
         PlayerPrefs.SetFloat("MusicVolume", sliderValue);
+        ifChanged = true;
     }
 
     

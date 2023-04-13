@@ -38,6 +38,12 @@ namespace Script
             {
                 Cursor.lockState = CursorLockMode.None;
             }
+
+            //if (Input.GetMouseButtonDown(0))
+            //{
+            //    if (Cursor.lockState == CursorLockMode.None)
+            //        Cursor.lockState = CursorLockMode.Locked;
+            //}
         }
     }
 }

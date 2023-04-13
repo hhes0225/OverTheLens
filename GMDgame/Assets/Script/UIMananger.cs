@@ -19,12 +19,16 @@ public class UIMananger : MonoBehaviour
     [SerializeField]
     private GameObject homeWindow;
 
+    [SerializeField]
+    private GameObject fadeEffectPanel;
+
     private void Awake()
     {
         //to initialize time(not paused)
         Time.timeScale = 1;
         //To apply the volume setting
         settingWindow.SetActive(true);
+        fadeEffectPanel.SetActive(true);
     }
 
     // Start is called before the first frame update
