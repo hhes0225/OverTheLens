@@ -11,12 +11,9 @@ public class Player : Character
     
     void Start()
     {
-        //maxHP = 100;
-
-        //Debug.Log(maxHP);
         hpBar.Initalize(maxHP, maxHP);
-        Debug.Log(hpBar.thisCurrentValue);
-        Debug.Log(hpBar.thisMaxValue);
+        //Debug.Log(hpBar.thisCurrentValue);
+        //Debug.Log(hpBar.thisMaxValue);
     }
 
     void Update()
