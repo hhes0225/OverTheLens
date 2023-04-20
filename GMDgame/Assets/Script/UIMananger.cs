@@ -46,6 +46,7 @@ public class UIMananger : MonoBehaviour
 
     void settingButtonEvent()
     {
+        Debug.Log("setting button clicked");
         Time.timeScale = 0;         //if player click UI button, then game will be paused 
         settingWindow.SetActive(true);
     }
