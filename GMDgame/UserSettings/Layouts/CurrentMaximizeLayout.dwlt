@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 50fefeff
-      m_LastClickedID: -65968
-      m_ExpandedIDs: d2b6ffff8cb8ffffe0c1ffffecc1ffffbee1ffff40e3ffff1ae9ffffd0edffff30efffff34fbffff18730000227300004a73000052730000a8730000f2730000e8830000fa830000a2850000d48500007c8600005088000062880000d0880000d8880000f2880000228900003c8900005489000074890000808900008e890000148a0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 34fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -619,7 +619,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.012804844, y: -0.026897242, z: 0.00034347342, w: -0.9995634}
     speed: 2
-    m_Value: {x: -0.012804845, y: -0.026897244, z: 0.00034347342, w: -0.9995634}
+    m_Value: {x: -0.012804751, y: -0.026897047, z: 0.00034347092, w: -0.9995561}
   m_Size:
     m_Target: 545.38165
     speed: 2
@@ -730,9 +730,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 61.666687}
-    m_SelectedIDs: 12810000
-    m_LastClickedID: 33042
-    m_ExpandedIDs: 0000000006810000088100000c8100000e81000010810000128100001481000016810000188100001a810000888100002290000000ca9a3b
+    m_SelectedIDs: 8a750000
+    m_LastClickedID: 30090
+    m_ExpandedIDs: 0000000080750000827500008475000086750000887500008a7500008c7500008e7500009075000092750000947500009675000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -760,7 +760,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000006810000088100000c8100000e81000010810000128100001481000016810000188100001a810000888100002290000000ca9a3b
+    m_ExpandedIDs: 0000000080750000827500008475000086750000887500008a7500008c7500008e75000090750000927500009475000096750000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -785,8 +785,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 50fefeff
-    m_LastClickedInstanceID: -65968
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000086700000
     m_RenameOverlay:
@@ -1039,8 +1039,8 @@ MonoBehaviour:
     y: 0
     width: 302
     height: 587.3333
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
