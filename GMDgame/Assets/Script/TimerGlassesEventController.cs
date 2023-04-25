@@ -13,10 +13,14 @@ public class TimerGlassesEventController : MonoBehaviour
     
     int randomIndex;
 
+    [SerializeField]
+    private GlassesEventTrigger glassesEventTrigger;
+
      void Start()
     {
         //filledArea = GetComponent<Image>();
         timerSlider = this.GetComponent<Slider>();
+        glassesEventTrigger.GetComponent<GlassesEventTrigger>();
 
         ResetTimer();
     }
@@ -41,6 +45,7 @@ public class TimerGlassesEventController : MonoBehaviour
         {
             Debug.Log("count end");
             ResetTimer();
+            glassesEventTrigger.GlassesEvent();
         }
     }
 
@@ -52,8 +57,8 @@ public class TimerGlassesEventController : MonoBehaviour
         randomIndex = Random.Range(0, fSliderBarTime.Count);//from zero to fSliderBarTime.Count - 1(Last value is exclusive)
 
         timerSlider.maxValue = fSliderBarTime[randomIndex];
-        Debug.Log("random index: "+randomIndex);
-        Debug.Log("random second: " + fSliderBarTime[randomIndex]);
+        //Debug.Log("random timer count index: "+randomIndex);
+        Debug.Log("random timer count second: " + fSliderBarTime[randomIndex]);
     }
     
     //change timer value(in case making some item regarding timer)
