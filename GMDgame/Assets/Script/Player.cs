@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : Character
 {
@@ -8,10 +9,14 @@ public class Player : Character
 
     [SerializeField]
     private HPbarController hpBar;
-    
+
+    [SerializeField]
+    private GameObject fadeEffectPanel;
+
     void Start()
     {
         hpBar.Initalize(maxHP, maxHP);
+        fadeEffectPanel.SetActive(true);
         //Debug.Log(hpBar.thisCurrentValue);
         //Debug.Log(hpBar.thisMaxValue);
     }
@@ -59,6 +64,15 @@ public class Player : Character
     public void PlayerDead()
     {
         Debug.Log("player dead");
+
         //load gameover scene
+        fadeEffectPanel.GetComponent<TransitionEffect>().FadeOut();
+        Invoke("nextSceneLoader", 1f);
+
+    }
+
+    void nextSceneLoader()
+    {
+        SceneManager.LoadScene(3);
     }
 }

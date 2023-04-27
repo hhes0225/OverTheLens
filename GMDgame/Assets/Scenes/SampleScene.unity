@@ -123,6 +123,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &17631894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17631895}
+  - component: {fileID: 17631896}
+  m_Layer: 0
+  m_Name: GlassesEventTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &17631895
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17631894}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 500, y: 81.395355, z: 500}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &17631896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17631894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e410070215e3e4097f4bc80929ad9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &30182054
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,11 +443,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
   m_RootOrder: 5
-=======
-  m_RootOrder: 4
->>>>>>> 1e5689e0d61fda38dc59de5ed27e069bf831aff7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!45 &276878286
 Skybox:
@@ -608,8 +648,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7526955183675936508, guid: d9115508ff4514447b2949e5685f78ec, type: 3}
   m_PrefabInstance: {fileID: 7526955183924886798}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &314772001
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,7 +685,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
->>>>>>> 1e5689e0d61fda38dc59de5ed27e069bf831aff7
 --- !u!1 &343047770
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,11 +719,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-<<<<<<< HEAD
-  m_AnchorMax: {x: 0, y: 1}
-=======
   m_AnchorMax: {x: 1, y: 1}
->>>>>>> 1e5689e0d61fda38dc59de5ed27e069bf831aff7
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -697,8 +730,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 343047770}
-<<<<<<< HEAD
-=======
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -769,13 +800,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371579936}
->>>>>>> 1e5689e0d61fda38dc59de5ed27e069bf831aff7
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -968,14 +997,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
-=======
   okButton: {fileID: 944641762}
   settingWindow: {fileID: 1860888093}
   homeWindow: {fileID: 1079748647}
   resumeButton: {fileID: 30182056}
   quitButton: {fileID: 753017776}
   fadeEffectPanel: {fileID: 292205550}
->>>>>>> 1e5689e0d61fda38dc59de5ed27e069bf831aff7
 --- !u!1 &474593368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1439,11 +1466,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1860888094}
-<<<<<<< HEAD
-  m_RootOrder: 1
-=======
   m_RootOrder: 2
->>>>>>> 1e5689e0d61fda38dc59de5ed27e069bf831aff7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &580659997
 GameObject:
@@ -2071,6 +2094,7 @@ MonoBehaviour:
   HP: 100
   maxHP: 100
   hpBar: {fileID: 1215098191}
+  fadeEffectPanel: {fileID: 292205550}
 --- !u!1 &710962431
 GameObject:
   m_ObjectHideFlags: 0
@@ -2622,10 +2646,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-<<<<<<< HEAD
-=======
   - component: {fileID: 963194229}
->>>>>>> 1e5689e0d61fda38dc59de5ed27e069bf831aff7
   - component: {fileID: 1079748649}
   m_Layer: 0
   m_Name: Main Camera
@@ -2936,6 +2957,7 @@ MonoBehaviour:
   - 30
   - 35
   - 40
+  glassesEventTrigger: {fileID: 17631896}
 --- !u!1 &1079748647
 GameObject:
   m_ObjectHideFlags: 0
@@ -4022,7 +4044,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820676229}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
 --- !u!1001 &1840263329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4080,7 +4101,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8805fa694adc4b4699746f3131b2f4b, type: 3}
-=======
 --- !u!1 &1857958720
 GameObject:
   m_ObjectHideFlags: 0
@@ -4157,7 +4177,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857958720}
   m_CullTransparentMesh: 1
->>>>>>> 1e5689e0d61fda38dc59de5ed27e069bf831aff7
 --- !u!1 &1860888093
 GameObject:
   m_ObjectHideFlags: 0
