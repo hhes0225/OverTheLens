@@ -1,3 +1,4 @@
+using Script.Inventory;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -17,10 +18,15 @@ namespace Script.GameScripts
         {
             if (Input.GetKeyDown(KeyCode.Mouse0) && playerInRange && SelectionManager.Instance.onTarget)
             {
-            
-                Debug.Log("item added to inventory");
-            
-                Destroy(gameObject);
+                if (!InventorySystem.Instance.CheckifFull())
+                {
+                    InventorySystem.Instance.AddToInv(itemName);
+                    Destroy(gameObject);
+                }
+                else
+                {
+                    Debug.Log("inventory is full!!!!");
+                }
             }
         }
 
