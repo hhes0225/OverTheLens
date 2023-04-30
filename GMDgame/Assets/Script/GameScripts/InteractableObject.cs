@@ -1,44 +1,44 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Script;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class InteractableObject : MonoBehaviour
+namespace Script.GameScripts
 {
-    public bool playerInRange;
-    public string ItemName = "?_?";
-
-    public string GetItemName()
+    public class InteractableObject : MonoBehaviour
     {
-        return ItemName;
-    }
+        public bool playerInRange;
+        public string itemName = "?_?";
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && playerInRange && SelectionManager.Instance.onTarget)
+        public string GetItemName()
         {
-            
-            Debug.Log("item added to inventory");
-            
-            Destroy(gameObject);
+            return itemName;
         }
-    }
 
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        private void Update()
         {
-            playerInRange = true;
+            if (Input.GetKeyDown(KeyCode.Mouse0) && playerInRange && SelectionManager.Instance.onTarget)
+            {
+            
+                Debug.Log("item added to inventory");
+            
+                Destroy(gameObject);
+            }
         }
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
+
+        private void OnTriggerEnter(Collider other)
         {
-            playerInRange = false;
+            if (other.CompareTag("Player"))
+            {
+                playerInRange = true;
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                playerInRange = false;
+            }
         }
     }
 }
