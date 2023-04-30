@@ -23,7 +23,6 @@ namespace Script.Inventory
         public bool isOpen;
 
         // public bool isFull;
-
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -54,7 +53,7 @@ namespace Script.Inventory
                 }
             }
         }
- 
+        
         void Update()
         {
  
