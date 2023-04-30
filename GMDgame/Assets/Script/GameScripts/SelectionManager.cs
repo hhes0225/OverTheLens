@@ -1,9 +1,7 @@
-using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace Script
+namespace Script.GameScripts
 {
     public class SelectionManager : MonoBehaviour
     {

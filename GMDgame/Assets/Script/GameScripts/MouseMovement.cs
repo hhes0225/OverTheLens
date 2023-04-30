@@ -1,6 +1,7 @@
+using Script.Inventory;
 using UnityEngine;
 
-namespace Script
+namespace Script.GameScripts
 {
     public class MouseMovement : MonoBehaviour
     {
@@ -19,31 +20,29 @@ namespace Script
 
         private void Update()
         {
-            var mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-            var mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
- 
-            // control rotation around x axis (Look up and down)
-            _xRotation -= mouseY;
- 
-            // we clamp the rotation so we can't Over-rotate (like in real life)
-            _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
- 
-            // control rotation around y axis (Look up and down)
-            _yRotation += mouseX;
- 
-            // applying both rotations
-            transform.localRotation = Quaternion.Euler(_xRotation, _yRotation, 0f);
-
-            if (Input.GetKey(KeyCode.Escape))
+            if (InventorySystem.Instance.isOpen == false)
             {
-                Cursor.lockState = CursorLockMode.None;
-            }
+                var mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+                var mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+ 
+                // control rotation around x axis (Look up and down)
+                _xRotation -= mouseY;
+ 
+                // we clamp the rotation so we can't Over-rotate (like in real life)
+                _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
+ 
+                // control rotation around y axis (Look up and down)
+                _yRotation += mouseX;
+ 
+                // applying both rotations
+                transform.localRotation = Quaternion.Euler(_xRotation, _yRotation, 0f);
 
-            //if (Input.GetMouseButtonDown(0))
-            //{
-            //    if (Cursor.lockState == CursorLockMode.None)
-            //        Cursor.lockState = CursorLockMode.Locked;
-            //}
+                if (Input.GetKey(KeyCode.Escape))
+                {
+                    Cursor.lockState = CursorLockMode.None;
+                }
+            }
+            
         }
     }
 }
