@@ -7,7 +7,8 @@ namespace Script.Inventory
 {
     public class InventorySystem : MonoBehaviour
     {
- 
+
+        public GameObject ItemInfoUI;
         public static InventorySystem Instance { get; set; }
 
         public GameObject inventoryScreenUI;
@@ -79,7 +80,7 @@ namespace Script.Inventory
             _slotEquip = NextEmptySlot();
             _itemAdd = Instantiate(Resources.Load<GameObject>(ItemName), _slotEquip.transform.position, _slotEquip.transform.rotation);
             _itemAdd.transform.SetParent(_slotEquip.transform);
-            _itemAdd.transform.localScale = new Vector3(1f, 1f, 1f);
+            _itemAdd.transform.localScale = new Vector3(0.77f, 0.77f, 0.77f);
             
             itemsList.Add(ItemName);
         }
@@ -114,6 +115,37 @@ namespace Script.Inventory
             else
             {
                 return false; 
+            }
+        }
+
+        public void RemoveItem(string nameToRemove, int amountToRemove)
+        {
+            int counter = amountToRemove;
+            for (var i = slotList.Count - 1; i >= 0; i--)
+            {
+                if (slotList[i].transform.childCount > 0)
+                {
+                    if (slotList[i].transform.GetChild(0).name == nameToRemove + "(Clone)" && counter != 0)
+                    {
+                        DestroyImmediate(slotList[i].transform.GetChild(0).gameObject);
+                        counter -= 1;
+                    }
+                }
+            }
+
+            ReCalculateList();
+        }
+
+        public void ReCalculateList()
+        {
+            itemsList.Clear();
+
+            foreach (GameObject slot in slotList)
+            {
+                if (slot.transform.childCount > 0)
+                {
+                    itemsList.Add(slot.transform.GetChild(0).name);
+                }
             }
         }
     }

@@ -14,7 +14,7 @@ public class HPbarController : MonoBehaviour
 
     public float thisMaxValue { get; set; }
 
-    private float currentValue;
+    public float currentValue;
 
     public float thisCurrentValue
     {

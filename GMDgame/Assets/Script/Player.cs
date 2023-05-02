@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Player : Character
 {
+    public static Player Instance { get; set; }
+    
     bool isHurt { get; set; } = false;
 
     [SerializeField]
-    private HPbarController hpBar;
+    public HPbarController hpBar;
 
     [SerializeField]
     private GameObject fadeEffectPanel;
@@ -26,11 +28,11 @@ public class Player : Character
         //testing health up/down function
         if (Input.GetKeyDown(KeyCode.I))
         {
-            PlayerDamaged();
+            PlayerDamaged(10);
         }
         else if (Input.GetKeyDown(KeyCode.O))
         {
-            PlayerRecovered();
+            PlayerRecovered(10);
         }
 
         //check game over state
@@ -41,23 +43,28 @@ public class Player : Character
     }
 
     //player not dead, just damaged
-    public void PlayerDamaged()
+    public void PlayerDamaged(int damage)
     {
         //if (isHurt)
         //    return;
         //isHurt = true;
 
         Debug.Log("Player Damaged");
-        hpBar.thisCurrentValue -= 10;
+        hpBar.thisCurrentValue -= damage;
 
         //some damaged effect(animation or coroutine)
         //for example, knock-back
     }
 
-    public void PlayerRecovered()
+    public void PlayerRecovered(int recovered)
     {
         Debug.Log("Player Recovered");
-        hpBar.thisCurrentValue += 10;
+        hpBar.thisCurrentValue += recovered;
+    }
+
+    public void setHealth(float health)
+    {
+        hpBar.thisCurrentValue = health;
     }
 
     //player dead(hp is under 0)
