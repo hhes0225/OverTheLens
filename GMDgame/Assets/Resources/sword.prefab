@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5900180332575404499}
   - component: {fileID: 585865988061721892}
   - component: {fileID: 3519158286741638307}
+  - component: {fileID: 4728697320476372275}
   m_Layer: 5
   m_Name: sword
   m_TagString: Untagged
@@ -102,3 +103,21 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &4728697320476372275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5900180332575404497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53d3798f8c2d1fa479c675e782c9e9b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTrashable: 1
+  thisName: Sword
+  thisDescription: Damage shield
+  thisFunctionality: Thanks to your sword you will have less damage
+  isConsumable: 1
+  healthEffect: -10
