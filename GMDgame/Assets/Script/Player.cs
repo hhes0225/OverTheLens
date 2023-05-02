@@ -51,6 +51,10 @@ public class Player : Character
 
         Debug.Log("Player Damaged");
         hpBar.thisCurrentValue -= damage;
+        if (hpBar.thisCurrentValue < 0)
+        {
+            hpBar.thisCurrentValue = 0;
+        }
 
         //some damaged effect(animation or coroutine)
         //for example, knock-back
