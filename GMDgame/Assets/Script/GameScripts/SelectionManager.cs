@@ -1,11 +1,11 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Script.GameScripts
 {
     public class SelectionManager : MonoBehaviour
     {
-
         public static SelectionManager Instance
         {
             get;
@@ -17,7 +17,9 @@ namespace Script.GameScripts
         
         public GameObject interactionInfoUI;
         TextMeshProUGUI _interactionText;
- 
+        public Image centerDotImage;
+        private GameObject _selectedObject;
+
         private void Start()
         {
             _interactionText = interactionInfoUI.GetComponent<TextMeshProUGUI>();
@@ -45,7 +47,7 @@ namespace Script.GameScripts
                 //Debug.Log(hit.transform.name);
 
                 InteractableObject interactable = selectionTransform.GetComponent<InteractableObject>();
-                
+
                 if (interactable && interactable.playerInRange)
                 {
                     onTarget = true;
@@ -64,6 +66,20 @@ namespace Script.GameScripts
                 onTarget = false;
                 interactionInfoUI.SetActive(false);
             }
+        }
+
+        public void DisableSelection()
+        {
+            centerDotImage.enabled = false;
+            interactionInfoUI.SetActive(false);
+            
+            _selectedObject = null;
+        }
+        
+        public void EnableSelection()
+        {
+            centerDotImage.enabled = true;
+            interactionInfoUI.SetActive(true);
         }
     }
 }
