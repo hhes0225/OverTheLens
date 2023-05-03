@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Mono.Cecil;
+using Script.GameScripts;
 using UnityEngine;
 
 namespace Script.Inventory
@@ -42,6 +43,8 @@ namespace Script.Inventory
             isOpen = false;
 
             PopulateSlotList();
+
+            Cursor.visible = false;
         }
 
         private void PopulateSlotList()
@@ -64,14 +67,21 @@ namespace Script.Inventory
                 Debug.Log("i is pressed");
                 inventoryScreenUI.SetActive(true);
                 Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 isOpen = true;
- 
+                
+                SelectionManager.Instance.DisableSelection();
+                SelectionManager.Instance.GetComponent<SelectionManager>().enabled = false;
             }
             else if (Input.GetKeyDown(KeyCode.I) && isOpen)
             {
                 inventoryScreenUI.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
                 isOpen = false;
+                
+                SelectionManager.Instance.EnableSelection();
+                SelectionManager.Instance.GetComponent<SelectionManager>().enabled = true;
             }
         }
 

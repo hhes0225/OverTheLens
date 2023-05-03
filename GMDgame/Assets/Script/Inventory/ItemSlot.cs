@@ -18,12 +18,7 @@ namespace Script.Inventory
                 return null;
             }
         }
- 
- 
- 
- 
- 
- 
+
         public void OnDrop(PointerEventData eventData)
         {
             Debug.Log("OnDrop");
@@ -34,7 +29,16 @@ namespace Script.Inventory
  
                 DragDrop.ItemBeingDragged.transform.SetParent(transform);
                 DragDrop.ItemBeingDragged.transform.localPosition = new Vector2(0, 0);
- 
+
+                if (transform.CompareTag("QuickSlot") == false)
+                {
+                    DragDrop.ItemBeingDragged.GetComponent<InventoryItem>().isQuickSlotted = false;
+                }
+
+                if (transform.CompareTag("QuickSlot"))
+                {
+                    DragDrop.ItemBeingDragged.GetComponent<InventoryItem>().isQuickSlotted = true;
+                }
             }
  
  
