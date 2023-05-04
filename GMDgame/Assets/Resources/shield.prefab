@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5900180332575404497
+--- !u!1 &3342199501519769981
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3519158286741638307}
   - component: {fileID: 4728697320476372275}
   m_Layer: 5
-  m_Name: sword
+  m_Name: shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5900180332575404497}
+  m_GameObject: {fileID: 3342199501519769981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -47,7 +47,7 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5900180332575404497}
+  m_GameObject: {fileID: 3342199501519769981}
   m_CullTransparentMesh: 1
 --- !u!114 &5900180332575404499
 MonoBehaviour:
@@ -55,7 +55,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5900180332575404497}
+  m_GameObject: {fileID: 3342199501519769981}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bb6ce3f3c4d1ac948a35ad4830150019, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1bfa0311e699ca9499444ae3896e188b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5900180332575404497}
+  m_GameObject: {fileID: 3342199501519769981}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4368de6c7b33fe6469155770ca970999, type: 3}
@@ -97,7 +97,7 @@ CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5900180332575404497}
+  m_GameObject: {fileID: 3342199501519769981}
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
@@ -109,18 +109,18 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5900180332575404497}
+  m_GameObject: {fileID: 3342199501519769981}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53d3798f8c2d1fa479c675e782c9e9b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isTrashable: 1
-  thisName: Sword
+  thisName: Shield
   thisDescription: Damage shield
-  thisFunctionality: Thanks to your sword you will have less damage
+  thisFunctionality: Thanks to your shield you will have less damage
   isConsumable: 0
-  healthEffect: -10
+  healthEffect: 15
   isQuickSlottable: 0
   isQuickSlotted: 0
   isSelected: 0
