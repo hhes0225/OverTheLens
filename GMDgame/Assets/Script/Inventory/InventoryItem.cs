@@ -72,8 +72,9 @@ namespace Script.Inventory
         // Triggered when the mouse is clicked over the item that has this script.
         public void OnPointerDown(PointerEventData eventData)
         {
-            //Right Mouse Button Click on
-            if (eventData.button == PointerEventData.InputButton.Right)
+            
+            //Left Mouse Button Click on
+            if (eventData.button == PointerEventData.InputButton.Left)
             {
                 if (isConsumable)
                 {
@@ -81,7 +82,10 @@ namespace Script.Inventory
                     _itemPendingConsumption = gameObject;
                     ConsumingFunction(healthEffect);
                 }
-
+            }
+            //Right Mouse Button Click on
+            if (eventData.button == PointerEventData.InputButton.Right)
+            {
                 if (isQuickSlottable && isQuickSlotted == false && QuickSlotSystem.Instance.CheckIfFull() == false)
                 {
                     QuickSlotSystem.Instance.AddToQuickSlot(gameObject);
@@ -93,7 +97,7 @@ namespace Script.Inventory
         // Triggered when the mouse button is released over the item that has this script.
         public void OnPointerUp(PointerEventData eventData)
         {
-            if (eventData.button == PointerEventData.InputButton.Right)
+            if (eventData.button == PointerEventData.InputButton.Left)
             {
                 if (isConsumable && _itemPendingConsumption == gameObject)
                 {

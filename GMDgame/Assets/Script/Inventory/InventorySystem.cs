@@ -88,6 +88,8 @@ namespace Script.Inventory
         public void AddToInv(string ItemName)
         {
             _slotEquip = NextEmptySlot();
+            Debug.Log(ItemName);
+            Debug.Log(Resources.Load<GameObject>(ItemName));
             _itemAdd = Instantiate(Resources.Load<GameObject>(ItemName), _slotEquip.transform.position, _slotEquip.transform.rotation);
             _itemAdd.transform.SetParent(_slotEquip.transform);
             _itemAdd.transform.localScale = new Vector3(0.77f, 0.77f, 0.77f);
