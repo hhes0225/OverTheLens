@@ -40,12 +40,6 @@ namespace Script.Inventory
                     DragDrop.ItemBeingDragged.GetComponent<InventoryItem>().isQuickSlotted = true;
                 }
             }
- 
- 
         }
- 
- 
- 
- 
     }
 }
