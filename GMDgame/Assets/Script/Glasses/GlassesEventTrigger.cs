@@ -31,10 +31,10 @@ public class GlassesEventTrigger : MonoBehaviour
         switch (randomIndex)
         {
             case 1: Event1(); /*eventEnd = true*/; break;
-            case 2: Event2(); /*eventEnd = true*/; break;
-            case 3: Event3(); /*eventEnd = true*/; break;
-            case 4: Event4(); /*eventEnd = true*/; break;
-            case 5: Event5(); /*eventEnd = true*/; break;
+            case 2: Event1(); /*eventEnd = true*/; break;
+            case 3: Event1(); /*eventEnd = true*/; break;
+            case 4: Event1(); /*eventEnd = true*/; break;
+            case 5: Event1(); /*eventEnd = true*/; break;
             default: Debug.Log("nothing triggered"); break;
         }
 
@@ -43,7 +43,9 @@ public class GlassesEventTrigger : MonoBehaviour
 
     void Event1()
     {
-        cameraTransform.rotation = Quaternion.Euler(0f, 0f, Random.Range(-20, 21));
+        //cameraTransform.rotation = Quaternion.Euler(cameraTransform.rotation.x, cameraTransform.rotation.y, Random.Range(-20, 21));
+        cameraTransform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        cameraTransform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         Debug.Log("glasses event1-Rotation is triggered");
     }
 
@@ -70,4 +72,16 @@ public class GlassesEventTrigger : MonoBehaviour
         glassesEffects[3].SetActive(true);
         Debug.Log("glasses event5 is triggered");
     }
+
+    public void RemoveEvents()
+    {
+        //cameraTransform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        glassesEffects[0].SetActive(false);
+        glassesEffects[1].SetActive(false);
+        glassesEffects[2].SetActive(false);
+        glassesEffects[3].SetActive(false);
+        glassesEffects[4].SetActive(false);
+        Debug.Log("glasses events are removed");
+    }
+
 }

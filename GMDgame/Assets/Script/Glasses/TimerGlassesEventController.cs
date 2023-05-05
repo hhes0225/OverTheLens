@@ -107,9 +107,11 @@ void Start()
         }
 
         nowState = EventState.Normal;
+        glassesEventTrigger.RemoveEvents();
 
         yield return null;
     }
+
 
     //change timer value(in case making some item regarding timer)
 }
