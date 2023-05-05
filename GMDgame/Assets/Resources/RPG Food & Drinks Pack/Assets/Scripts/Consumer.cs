@@ -22,14 +22,14 @@ public class Consumer : MonoBehaviour
         }
     }
 
-    void Update()
+    /*void Update()
     {
         if (Time.time - lastChange > interval)
         {
             Consume();
             lastChange = Time.time;
         }
-    }
+    }*/
 
     void Consume()
     {
