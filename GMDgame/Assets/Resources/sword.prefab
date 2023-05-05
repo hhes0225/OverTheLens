@@ -121,6 +121,6 @@ MonoBehaviour:
   thisFunctionality: Thanks to your sword you will have less damage
   isConsumable: 0
   healthEffect: -10
-  isQuickSlottable: 1
+  isQuickSlottable: 0
   isQuickSlotted: 0
   isSelected: 0
