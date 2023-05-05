@@ -54,7 +54,7 @@ public class TransitionEffect : MonoBehaviour
         }
 
         time = 0f;
-        yield return new WaitForSeconds(0.5f);
+        //yield return new WaitForSeconds(0.2f);
         EffectPanel.SetActive(false);
     }
 
