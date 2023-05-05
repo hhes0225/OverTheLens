@@ -178,6 +178,10 @@ GameObject:
   - component: {fileID: 33655345877735214}
   - component: {fileID: 23413766368083876}
   - component: {fileID: 114471919324853036}
+  - component: {fileID: 8181863756342546181}
+  - component: {fileID: 521598791163052190}
+  - component: {fileID: -4111894645188023928}
+  - component: {fileID: -4528513144552904119}
   m_Layer: 0
   m_Name: WineBottle
   m_TagString: Untagged
@@ -194,7 +198,7 @@ Transform:
   m_GameObject: {fileID: 1112174935158326}
   m_LocalRotation: {x: -0, y: -0, z: -0.2588186, w: 0.965926}
   m_LocalPosition: {x: 0.037, y: 0.127, z: -0.614}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4292837843553996}
@@ -267,6 +271,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3abfc7198c85ce649bd21dd41e50b870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &8181863756342546181
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112174935158326}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!65 &521598791163052190
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112174935158326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -0.000000009313226, y: 0.061722536, z: -0.00041718595}
+--- !u!65 &-4111894645188023928
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112174935158326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: -0.000000009313226, y: 0.061722536, z: -0.00041718595}
+--- !u!114 &-4528513144552904119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112174935158326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 458d91f0e1dc72c42945834071f35cf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInRange: 0
+  itemName: winebottle
 --- !u!1 &1262963071071174
 GameObject:
   m_ObjectHideFlags: 0
