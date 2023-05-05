@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+enum EventState
+{
+    Normal,
+    GlassesEvent
+}
+
 public class TimerGlassesEventController : MonoBehaviour
 {
     //private Image filledArea;
@@ -13,11 +19,16 @@ public class TimerGlassesEventController : MonoBehaviour
     
     int randomIndex;
 
+    bool check;
+
     [SerializeField]
     private GlassesEventTrigger glassesEventTrigger;
 
-     void Start()
+    EventState nowState = EventState.Normal;
+
+void Start()
     {
+        check = false;
         //filledArea = GetComponent<Image>();
         timerSlider = this.GetComponent<Slider>();
         glassesEventTrigger.GetComponent<GlassesEventTrigger>();
@@ -37,15 +48,27 @@ public class TimerGlassesEventController : MonoBehaviour
         //    Debug.Log("count end");
         //}
 
-        if (timerSlider.value < fSliderBarTime[randomIndex])
-        {
-            timerSlider.value += Time.deltaTime;
+        if (nowState == EventState.Normal) { 
+            if (timerSlider.value < fSliderBarTime[randomIndex])
+            {
+                timerSlider.value += Time.deltaTime;
+            }
+            else
+            {
+                Debug.Log("count end");
+                StartCoroutine("GlassesEvent");
+            }
         }
-        else
+        else//nowState==EventState.
         {
-            Debug.Log("count end");
-            ResetTimer();
-            glassesEventTrigger.GlassesEvent();
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                StopCoroutine("GlassesEvent");
+                //Debug.Log("glasses event end");
+                check = true;
+                StartCoroutine("ExitEvent");
+                //Debug.Log("normal again");
+            }
         }
     }
 
@@ -60,6 +83,33 @@ public class TimerGlassesEventController : MonoBehaviour
         //Debug.Log("random timer count index: "+randomIndex);
         Debug.Log("random timer count second: " + fSliderBarTime[randomIndex]);
     }
-    
+
+    //Glasses Event Coroutine
+    IEnumerator GlassesEvent()
+    {
+        nowState = EventState.GlassesEvent;
+        check=glassesEventTrigger.GlassesEvent();
+
+        yield return null;
+    }
+
+    IEnumerator EscapeEvent()
+    {
+        //escape button action event
+        yield return null;
+    }
+    IEnumerator ExitEvent()
+    {
+        if (check)
+        {
+            check = false;
+            ResetTimer();
+        }
+
+        nowState = EventState.Normal;
+
+        yield return null;
+    }
+
     //change timer value(in case making some item regarding timer)
 }

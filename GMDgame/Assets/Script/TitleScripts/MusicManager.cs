@@ -10,6 +10,8 @@ public class MusicManager : MonoBehaviour
     private GameObject[] musics;
     public AudioMixer mixer;
 
+    public static MusicManager instance;
+
     //guarantee music object uniqueness
     //this object will not be destroyed after scene change
     private void Awake()
@@ -19,7 +21,16 @@ public class MusicManager : MonoBehaviour
         if (musics.Length >= 2)
             Destroy(this.gameObject);
 
-        DontDestroyOnLoad(transform.gameObject);
+        //if (instance == null)
+        //{
+        //    instance = this;
+        //    DontDestroyOnLoad(instance);
+        //}
+        //else
+        //{
+        //    Destroy(gameObject); 
+        //}
+
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -37,5 +48,15 @@ public class MusicManager : MonoBehaviour
     public void StopMusic()
     {
         audioSource.Stop();
+    }
+
+    public void SFXPlay(string sfxName, AudioClip clip)
+    {
+        GameObject tmpSFX = new GameObject(sfxName+"Sound");
+        AudioSource audioSource = tmpSFX.AddComponent<AudioSource>();
+        audioSource.clip = clip;
+        audioSource.Play();
+
+        Destroy(audioSource, clip.length);
     }
 }
