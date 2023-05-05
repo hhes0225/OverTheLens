@@ -17,7 +17,17 @@ namespace Script.GameScripts
         private Vector3 _velocity;
  
         private bool _isGrounded;
- 
+
+        AudioSource audiosrc;
+        public AudioClip clip;
+        bool isMoving = false;
+
+
+        private void Start()
+        {
+            audiosrc = GetComponent<AudioSource>();
+        }
+
         // Update is called once per frame
         private void Update()
         {
@@ -35,7 +45,24 @@ namespace Script.GameScripts
             //right is the red Axis, forward is the blue axis
             var transform1 = transform;
             var move = transform1.right * x + transform1.forward * z;
- 
+
+            if (move != new Vector3(0,0,0))
+                isMoving = true;
+            else { 
+                isMoving = false;
+                //Debug.Log("IDLE");
+            }
+
+            if (isMoving)
+            {
+                if (!audiosrc.isPlaying)
+                    audiosrc.Play();
+                //MusicManager.instance.SFXPlay("Walk", clip);
+            }
+            else {
+                audiosrc.Stop();
+            }
+
             controller.Move(move * (speed * Time.deltaTime));
  
             //check if the player is on the ground so he can jump
