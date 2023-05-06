@@ -38,15 +38,6 @@ void Start()
 
      void Update()
     {
-        //if (filledArea.fillAmount <= fSliderBarTime[randomIndex])
-        //{
-        //    //filledArea.fillAmount += Time.deltaTime;
-        //    filledArea.fillAmount = Mathf.Lerp(filledArea.fillAmount, filledArea.fillAmount+Time.deltaTime, Time.deltaTime * 2.5f);
-        //}
-        //else
-        //{
-        //    Debug.Log("count end");
-        //}
 
         if (nowState == EventState.Normal) { 
             if (timerSlider.value < fSliderBarTime[randomIndex])
@@ -64,10 +55,8 @@ void Start()
             if (Input.GetKeyDown(KeyCode.G))
             {
                 StopCoroutine("GlassesEvent");
-                //Debug.Log("glasses event end");
                 check = true;
                 StartCoroutine("ExitEvent");
-                //Debug.Log("normal again");
             }
         }
     }
