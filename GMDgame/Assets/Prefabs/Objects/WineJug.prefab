@@ -462,7 +462,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: -0.000030260535, y: -0.00042103595, z: -0.0032108387}
 --- !u!65 &2425841440179578441
 BoxCollider:
@@ -475,7 +475,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
+  m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: -0.000030260535, y: -0.00042103595, z: -0.0032108387}
 --- !u!225 &7602163224775750377
 CanvasGroup:
