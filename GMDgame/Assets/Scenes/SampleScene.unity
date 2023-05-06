@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2572571427549398600, guid: c8805fa694adc4b4699746f3131b2f4b, type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 2947665072136982406, guid: c8805fa694adc4b4699746f3131b2f4b, type: 3}
       propertyPath: m_Name
@@ -4444,6 +4444,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3463057917224117467, guid: 5f8b2c4557a6d2548a85a1c17e7cca09, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f8b2c4557a6d2548a85a1c17e7cca09, type: 3}
 --- !u!4 &959489010 stripped
@@ -4849,7 +4853,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2572571427549398600, guid: c8805fa694adc4b4699746f3131b2f4b, type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 2947665072136982406, guid: c8805fa694adc4b4699746f3131b2f4b, type: 3}
       propertyPath: m_Name
@@ -4975,6 +4979,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1845056166}
     m_Modifications:
+    - target: {fileID: -2572571427549398600, guid: c8805fa694adc4b4699746f3131b2f4b, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 2947665072136982406, guid: c8805fa694adc4b4699746f3131b2f4b, type: 3}
       propertyPath: m_Name
       value: Rabbit 2 (1)
@@ -5743,6 +5751,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3463057917224117467, guid: 5f8b2c4557a6d2548a85a1c17e7cca09, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f8b2c4557a6d2548a85a1c17e7cca09, type: 3}
 --- !u!4 &1191535619 stripped
@@ -6128,6 +6140,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1845056166}
     m_Modifications:
+    - target: {fileID: -2572571427549398600, guid: c8805fa694adc4b4699746f3131b2f4b, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 2947665072136982406, guid: c8805fa694adc4b4699746f3131b2f4b, type: 3}
       propertyPath: m_Name
       value: Rabbit 2 (7)
@@ -6538,6 +6554,10 @@ PrefabInstance:
     - target: {fileID: 2953534499552418986, guid: 5f8b2c4557a6d2548a85a1c17e7cca09, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463057917224117467, guid: 5f8b2c4557a6d2548a85a1c17e7cca09, type: 3}
+      propertyPath: m_Constraints
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f8b2c4557a6d2548a85a1c17e7cca09, type: 3}
@@ -8434,7 +8454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1807995400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8689,7 +8709,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2572571427549398600, guid: c8805fa694adc4b4699746f3131b2f4b, type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 2947665072136982406, guid: c8805fa694adc4b4699746f3131b2f4b, type: 3}
       propertyPath: m_Name
@@ -8996,6 +9016,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1845056166}
     m_Modifications:
+    - target: {fileID: -2572571427549398600, guid: c8805fa694adc4b4699746f3131b2f4b, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 2947665072136982406, guid: c8805fa694adc4b4699746f3131b2f4b, type: 3}
       propertyPath: m_Name
       value: Rabbit 2 (5)
@@ -9838,6 +9862,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1845056166}
     m_Modifications:
+    - target: {fileID: -2572571427549398600, guid: c8805fa694adc4b4699746f3131b2f4b, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 2947665072136982406, guid: c8805fa694adc4b4699746f3131b2f4b, type: 3}
       propertyPath: m_Name
       value: Rabbit 2 (3)
