@@ -23,7 +23,7 @@ namespace Script.Character
             var safetyLimit = 100;
             do
             {
-                var rayStart = new Vector3(Random.Range(TERRAIN_X_MIN, TERRAIN_X_MAX), 150, Random.Range(TERRAIN_Z_MIN, TERRAIN_Z_MAX));
+                var rayStart = new Vector3(Random.Range(TERRAIN_X_MIN, TERRAIN_X_MAX), 170, Random.Range(TERRAIN_Z_MIN, TERRAIN_Z_MAX));
                 if ( !Physics.Raycast ( rayStart, Vector3.down, out var hit, Mathf.Infinity ) )
                     continue;
                 
