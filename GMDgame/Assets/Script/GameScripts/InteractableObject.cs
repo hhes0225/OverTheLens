@@ -19,6 +19,7 @@ namespace Script.GameScripts
         {
             if (Input.GetKeyDown(KeyCode.Mouse0) && playerInRange && SelectionManager.Instance.onTarget)
             {
+                Debug.Log(itemName + " clicked");
                 if (!InventorySystem.Instance.CheckifFull())
                 {
                     InventorySystem.Instance.AddToInv(itemName);

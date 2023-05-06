@@ -24,9 +24,9 @@ namespace Script.Character
             do
             {
                 var rayStart = new Vector3(Random.Range(TERRAIN_X_MIN, TERRAIN_X_MAX), 170, Random.Range(TERRAIN_Z_MIN, TERRAIN_Z_MAX));
-                if ( !Physics.Raycast ( rayStart, Vector3.down, out var hit, Mathf.Infinity ) )
+                if (!Physics.Raycast(rayStart, Vector3.down, out var hit, Mathf.Infinity))
                     continue;
-                
+
                 var spawnedPlayer = Instantiate(player, transform).transform;
                 spawnedPlayer.position = new Vector3 ( hit.point.x, hit.point.y + Random.Range ( 35, 300 ), hit.point.z );
                 spawnedPlayer.rotation *= Quaternion.FromToRotation ( Vector3.up, hit.normal );

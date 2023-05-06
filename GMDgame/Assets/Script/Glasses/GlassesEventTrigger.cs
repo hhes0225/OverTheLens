@@ -11,8 +11,8 @@ public class GlassesEventTrigger : MonoBehaviour
     [SerializeField]
     List<GameObject> glassesEffects;
 
-    //[SerializeField]
-    //private List<int> fSliderBarTime = new List<int>() { 1, 2, 3 };
+    [SerializeField]
+    GameObject buttonActionSlider;
 
     int randomIndex;
 
@@ -44,8 +44,8 @@ public class GlassesEventTrigger : MonoBehaviour
     void Event1()
     {
         //cameraTransform.rotation = Quaternion.Euler(cameraTransform.rotation.x, cameraTransform.rotation.y, Random.Range(-20, 21));
-        cameraTransform.rotation = Quaternion.Euler(0f, 0f, 0f);
-        cameraTransform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+        //cameraTransform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        cameraTransform.localRotation = Quaternion.Euler(0f, 0f, Random.Range(-20, 21));
         Debug.Log("glasses event1-Rotation is triggered");
     }
 
