@@ -38,7 +38,7 @@ namespace Script.GameScripts
                 else
                 {
                     Debug.Log("Clear Game!");
-                    SubUIManager.instance.GameClaerEvent();
+                    //SubUIManager.instance.GameClaerEvent();
                 }
             }
         }

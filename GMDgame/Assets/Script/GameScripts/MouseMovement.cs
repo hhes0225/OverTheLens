@@ -43,10 +43,10 @@ namespace Script.GameScripts
                     
                 }
 
-                if(Cursor.lockState==CursorLockMode.None && Input.GetKeyDown(KeyCode.Mouse0))
-                {
-                    Cursor.lockState = CursorLockMode.Locked;
-                }
+                //if(Cursor.lockState==CursorLockMode.None && Input.GetKeyDown(KeyCode.Mouse0))
+                //{
+                //    Cursor.lockState = CursorLockMode.Locked;
+                //}
             }
             
         }
