@@ -117,10 +117,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTrashable: 1
   thisName: Sword
-  thisDescription: Damage shield
-  thisFunctionality: Thanks to your sword you will have less damage
+  thisDescription: +10 health
+  thisFunctionality: You gain some health
   isConsumable: 0
-  healthEffect: -10
+  healthEffect: 10
   isQuickSlottable: 0
   isQuickSlotted: 0
   isSelected: 0
