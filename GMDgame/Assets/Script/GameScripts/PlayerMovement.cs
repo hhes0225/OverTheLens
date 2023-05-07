@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Script.GameScripts
 {
@@ -22,6 +23,9 @@ namespace Script.GameScripts
         public AudioClip clip;
         bool isMoving = false;
 
+        public GameObject toggleAWSD;
+        public GameObject toggleZQSD;
+
 
         private void Start()
         {
@@ -38,10 +42,24 @@ namespace Script.GameScripts
             {
                 _velocity.y = -2f;
             }
- 
+            
+            //getting the input from the player so it can replace Input.GetAxis("Horizontal") and Input.GetAxis("Vertical")
+
             var x = Input.GetAxis("Horizontal");
             var z = Input.GetAxis("Vertical");
- 
+            
+            
+            if (toggleZQSD.GetComponent<Toggle>().isOn)
+            {
+                x = Input.GetAxis("Horizontal");
+                z = Input.GetAxis("Vertical");
+            }
+            else if (toggleAWSD.GetComponent<Toggle>().isOn)
+            {
+                x = Input.GetAxis("Horizontal2");
+                z = Input.GetAxis("Vertical2");
+            }
+
             //right is the red Axis, forward is the blue axis
             var transform1 = transform;
             var move = transform1.right * x + transform1.forward * z;
