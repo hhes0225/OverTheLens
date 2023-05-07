@@ -17,9 +17,14 @@ public class MusicManager : MonoBehaviour
     private void Awake()
     {
         musics = GameObject.FindGameObjectsWithTag("Music");
+        
 
         if (musics.Length >= 2)
             Destroy(this.gameObject);
+        else
+        {
+            instance = this;
+        }
 
         //if (instance == null)
         //{
