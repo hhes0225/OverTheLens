@@ -7,6 +7,8 @@ public class SettingManager : MonoBehaviour
 {
     [SerializeField]
     private Button okButton;
+    
+    
 
     [SerializeField]
     private GameObject settingWindow;
@@ -15,7 +17,7 @@ public class SettingManager : MonoBehaviour
     void Start()
     {
         okButton.onClick.AddListener((okButtonEvent));
-
+        
     }
 
 
@@ -23,7 +25,4 @@ public class SettingManager : MonoBehaviour
     {
         settingWindow.SetActive(false);
     }
-
-
-    
 }

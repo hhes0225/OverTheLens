@@ -3566,7 +3566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &293511306
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4288,6 +4288,8 @@ MonoBehaviour:
   resumeButton: {fileID: 30182056}
   quitButton: {fileID: 753017776}
   fadeEffectPanel: {fileID: 292205550}
+  toggleAWSD: {fileID: 1840201492}
+  toggleZQSD: {fileID: 1430470072}
 --- !u!1001 &371902468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9118,6 +9120,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   clip: {fileID: 0}
+  toggleAWSD: {fileID: 1840201492}
+  toggleZQSD: {fileID: 1430470072}
 --- !u!114 &705980633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14162,8 +14166,8 @@ MonoBehaviour:
   - 35
   - 40
   glassesEventTrigger: {fileID: 17631896}
-  buttonActionObj: {fileID: 0}
-  effectSound: {fileID: 0}
+  buttonActionObj: {fileID: 1758863788}
+  effectSound: {fileID: 8300000, guid: 5dd9f28ecb246c94c993a0bcfe17a5f2, type: 3}
 --- !u!1001 &1055203346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24604,6 +24608,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4260712248659418329, guid: 1749b3d011ffe0748b66b6f0e20aa8dd, type: 3}
   m_PrefabInstance: {fileID: 1752586873}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1758863788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2963590587673094243, guid: 4ad2f1c2a6a432c479ea42813dd8e1d9, type: 3}
+  m_PrefabInstance: {fileID: 2963590589503519231}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1765449949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25702,7 +25711,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1001 &1840263329
 PrefabInstance:
   m_ObjectHideFlags: 0
