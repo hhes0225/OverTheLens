@@ -10,6 +10,15 @@ namespace Script.GameScripts
         public bool playerInRange;
         public string itemName = "?_?";
 
+        public AudioClip pickSound;
+
+
+        private void Start()
+        {
+                
+        }
+
+
         public string GetItemName()
         {
             return itemName;
@@ -19,6 +28,7 @@ namespace Script.GameScripts
         {
             if (Input.GetKeyDown(KeyCode.Mouse0) && playerInRange && SelectionManager.Instance.onTarget)
             {
+                MusicManager.instance.SFXPlay("pickSound", pickSound);
                 Debug.Log(itemName + " clicked");
                 if (!InventorySystem.Instance.CheckifFull())
                 {

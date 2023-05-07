@@ -11,8 +11,8 @@ public class GlassesEventTrigger : MonoBehaviour
     [SerializeField]
     List<GameObject> glassesEffects;
 
-    [SerializeField]
-    GameObject buttonActionSlider;
+    //[SerializeField]
+    //GameObject buttonActionSlider;
 
     int randomIndex;
 
@@ -31,10 +31,10 @@ public class GlassesEventTrigger : MonoBehaviour
         switch (randomIndex)
         {
             case 1: Event1(); /*eventEnd = true*/; break;
-            case 2: Event1(); /*eventEnd = true*/; break;
-            case 3: Event1(); /*eventEnd = true*/; break;
-            case 4: Event1(); /*eventEnd = true*/; break;
-            case 5: Event1(); /*eventEnd = true*/; break;
+            case 2: Event2(); /*eventEnd = true*/; break;
+            case 3: Event3(); /*eventEnd = true*/; break;
+            case 4: Event4(); /*eventEnd = true*/; break;
+            case 5: Event5(); /*eventEnd = true*/; break;
             default: Debug.Log("nothing triggered"); break;
         }
 
@@ -75,7 +75,7 @@ public class GlassesEventTrigger : MonoBehaviour
 
     public void RemoveEvents()
     {
-        //cameraTransform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        cameraTransform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         glassesEffects[0].SetActive(false);
         glassesEffects[1].SetActive(false);
         glassesEffects[2].SetActive(false);

@@ -18,7 +18,7 @@ namespace Script.Trap
         {
             _isCausingDamage = true;
 
-            Debug.Log("you touched trap");
+            //Debug.Log("you touched trap");
 
             Player player = other.gameObject.GetComponent<Player>();
 

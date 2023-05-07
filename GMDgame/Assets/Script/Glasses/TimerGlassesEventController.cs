@@ -24,7 +24,12 @@ public class TimerGlassesEventController : MonoBehaviour
     [SerializeField]
     private GlassesEventTrigger glassesEventTrigger;
 
+    [SerializeField]
+    private GameObject buttonActionObj;
+
     EventState nowState = EventState.Normal;
+
+    public AudioClip effectSound;
 
 void Start()
     {
@@ -32,6 +37,7 @@ void Start()
         //filledArea = GetComponent<Image>();
         timerSlider = this.GetComponent<Slider>();
         glassesEventTrigger.GetComponent<GlassesEventTrigger>();
+        Debug.Log(buttonActionObj.name + " วาด็ตส");
 
         ResetTimer();
     }
@@ -52,7 +58,7 @@ void Start()
         }
         else//nowState==EventState.
         {
-            if (Input.GetKeyDown(KeyCode.G))
+            if (buttonActionObj.activeSelf == false)
             {
                 StopCoroutine("GlassesEvent");
                 check = true;
@@ -76,8 +82,11 @@ void Start()
     //Glasses Event Coroutine
     IEnumerator GlassesEvent()
     {
+        //Debug.Log(MusicManager.instance);
+        MusicManager.instance.SFXPlay("glassesEventTrigger", effectSound);
         nowState = EventState.GlassesEvent;
         check=glassesEventTrigger.GlassesEvent();
+        buttonActionObj.SetActive(true);
 
         yield return null;
     }
