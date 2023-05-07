@@ -13,12 +13,6 @@ namespace Script.GameScripts
         public AudioClip pickSound;
 
 
-        private void Start()
-        {
-                
-        }
-
-
         public string GetItemName()
         {
             return itemName;
@@ -30,14 +24,21 @@ namespace Script.GameScripts
             {
                 MusicManager.instance.SFXPlay("pickSound", pickSound);
                 Debug.Log(itemName + " clicked");
-                if (!InventorySystem.Instance.CheckifFull())
-                {
-                    InventorySystem.Instance.AddToInv(itemName);
-                    Destroy(gameObject);
+                if (itemName != "glasses") { 
+                    if (!InventorySystem.Instance.CheckifFull())
+                    {
+                        InventorySystem.Instance.AddToInv(itemName);
+                        Destroy(gameObject);
+                    }
+                    else
+                    {
+                        Debug.Log("inventory is full!!!!");
+                    }
                 }
                 else
                 {
-                    Debug.Log("inventory is full!!!!");
+                    Debug.Log("Clear Game!");
+                    SubUIManager.instance.GameClaerEvent();
                 }
             }
         }

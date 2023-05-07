@@ -40,6 +40,12 @@ namespace Script.GameScripts
                 if (Input.GetKey(KeyCode.Escape))
                 {
                     Cursor.lockState = CursorLockMode.None;
+                    
+                }
+
+                if(Cursor.lockState==CursorLockMode.None && Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                    Cursor.lockState = CursorLockMode.Locked;
                 }
             }
             

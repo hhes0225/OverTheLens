@@ -85,7 +85,7 @@ namespace Script.Inventory
         }
 
         public void AddToInv(string ItemName)
-        {
+        { 
             _slotEquip = NextEmptySlot();
             Debug.Log(ItemName);
             Debug.Log(Resources.Load<GameObject>(ItemName));

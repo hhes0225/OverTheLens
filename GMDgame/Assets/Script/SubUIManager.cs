@@ -23,13 +23,6 @@ public class SubUIManager : MonoBehaviour
 
     [SerializeField]
     private GameObject fadeEffectPanel;
-    
-    [SerializeField]
-    private GameObject toggleAWSD;
-    
-    [SerializeField]
-    private GameObject toggleZQSD;
-    
 
     // Start is called before the first frame update
     void Start()
@@ -37,8 +30,7 @@ public class SubUIManager : MonoBehaviour
         okButton.onClick.AddListener((okButtonEvent));
         resumeButton.onClick.AddListener((resumeButtonEvent));
         quitButton.onClick.AddListener((quitButtonEvent));
-        toggleAWSD.GetComponent<Toggle>().onValueChanged.AddListener((toggleAWSDEvent));
-        toggleZQSD.GetComponent<Toggle>().onValueChanged.AddListener((toggleZQSDEvent));
+
 
     }
 
@@ -65,24 +57,8 @@ public class SubUIManager : MonoBehaviour
 
     void titleSceneLoader()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         SceneManager.LoadScene(0);
-    }
-    
-    void toggleAWSDEvent(bool isOn)
-    {
-        if (isOn)
-        {
-            toggleZQSD.GetComponent<Toggle>().isOn = false;
-            toggleAWSD.GetComponent<Toggle>().isOn = true;
-        }
-    }
-    
-    void toggleZQSDEvent(bool isOn)
-    {
-        if (isOn)
-        {
-            toggleAWSD.GetComponent<Toggle>().isOn = false;
-            toggleZQSD.GetComponent<Toggle>().isOn = true;
-        }
     }
 }

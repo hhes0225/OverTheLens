@@ -9,6 +9,8 @@ public class Player : Character
     
     bool isHurt { get; set; } = false;
 
+    bool isDead=false;
+
     [SerializeField]
     public HPbarController hpBar;
 
@@ -38,9 +40,9 @@ public class Player : Character
         }
 
         //check game over state
-        if (hpBar.thisCurrentValue == 0)
+        if (hpBar.thisCurrentValue == 0 && isDead==false)
         {
-            PlayerDead();
+            StartCoroutine("PlayerDead");
         }
     }
 
@@ -76,18 +78,33 @@ public class Player : Character
     }
 
     //player dead(hp is under 0)
-    public void PlayerDead()
+    //public void PlayerDead()
+    //{
+    //    Debug.Log("player dead");
+
+    //    StartCoroutine("effectPlay");
+
+    //    //load gameover scene
+    //    SubUIManager.instance.GameOverEvent();
+
+    //}
+
+    IEnumerator PlayerDead()
     {
+        isDead = true;
         Debug.Log("player dead");
 
+        MusicManager.instance.SFXPlay("gameOver", effectSound[2]);
+        yield return new WaitForSeconds(2.0f);
+
         //load gameover scene
-        fadeEffectPanel.GetComponent<TransitionEffect>().FadeOut();
-        Invoke("nextSceneLoader", 1f);
-
+        SubUIManager.instance.GameOverEvent();
+        yield return null;
     }
 
-    void nextSceneLoader()
-    {
-        SceneManager.LoadScene(3);
-    }
+    //IEnumerator effectPlay()
+    //{
+    //    MusicManager.instance.SFXPlay("gameOver", effectSound[2]);
+    //    yield return new WaitForSeconds(6.0f);
+    //}
 }

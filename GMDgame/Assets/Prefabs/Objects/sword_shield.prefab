@@ -140,6 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   itemName: shield
+  pickSound: {fileID: 8300000, guid: 48778de98f51bb947bf0ac3036b87023, type: 3}
 --- !u!54 &2027695590317048929
 Rigidbody:
   m_ObjectHideFlags: 0

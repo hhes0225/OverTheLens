@@ -316,6 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   itemName: cheese
+  pickSound: {fileID: 8300000, guid: 48778de98f51bb947bf0ac3036b87023, type: 3}
 --- !u!65 &6012043896120251520
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -126,11 +126,11 @@ namespace Script.Inventory
             {
                 if ((healthBeforeConsumption + healthEffect) > maxHealth)
                 {
-                    GameObject.Find("Player").GetComponent<Player>().hpBar.thisCurrentValue = maxHealth;
+                    GameObject.Find("Player").GetComponent<Player>().setHealth(maxHealth);
                 }
                 else
                 {
-                    GameObject.Find("Player").GetComponent<Player>().hpBar.thisCurrentValue += healthEffect;
+                    GameObject.Find("Player").GetComponent<Player>().PlayerRecovered((int)healthEffect);
                 }
             }
         }

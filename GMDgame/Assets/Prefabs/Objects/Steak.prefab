@@ -240,6 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   itemName: steak
+  pickSound: {fileID: 8300000, guid: 48778de98f51bb947bf0ac3036b87023, type: 3}
 --- !u!54 &2727271074968400260
 Rigidbody:
   m_ObjectHideFlags: 0

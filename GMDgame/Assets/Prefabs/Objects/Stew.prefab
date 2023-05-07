@@ -240,6 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   itemName: stew
+  pickSound: {fileID: 8300000, guid: 48778de98f51bb947bf0ac3036b87023, type: 3}
 --- !u!54 &6820624505803269988
 Rigidbody:
   m_ObjectHideFlags: 0
