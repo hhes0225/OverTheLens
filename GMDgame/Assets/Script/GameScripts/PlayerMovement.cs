@@ -22,6 +22,9 @@ namespace Script.GameScripts
         public AudioClip clip;
         bool isMoving = false;
 
+        public GameObject toggleAWSD;
+        public GameObject toggleZQSD;
+
 
         private void Start()
         {
@@ -38,7 +41,24 @@ namespace Script.GameScripts
             {
                 _velocity.y = -2f;
             }
- 
+            
+            //getting the input from the player so it can replace Input.GetAxis("Horizontal") and Input.GetAxis("Vertical")
+
+            if (toggleAWSD.activeSelf)
+            {
+                Input.GetAxis("Horizontal");
+                Input.GetAxis("Vertical");
+            }
+            else if (toggleZQSD.activeSelf)
+            {
+                Input.GetAxis("Horizontal2");
+                Input.GetAxis("Vertical2");
+            }
+
+
+
+
+
             var x = Input.GetAxis("Horizontal");
             var z = Input.GetAxis("Vertical");
  

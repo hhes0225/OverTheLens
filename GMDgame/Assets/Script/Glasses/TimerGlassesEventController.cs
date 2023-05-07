@@ -37,7 +37,7 @@ void Start()
         //filledArea = GetComponent<Image>();
         timerSlider = this.GetComponent<Slider>();
         glassesEventTrigger.GetComponent<GlassesEventTrigger>();
-        Debug.Log(buttonActionObj.name + " гр╢Г╣й");
+        //Debug.Log(buttonActionObj.name + " О©╫р╢О©╫О©╫");
 
         ResetTimer();
     }
