@@ -15,6 +15,8 @@ public class Player : Character
     [SerializeField]
     private GameObject fadeEffectPanel;
 
+    public List<AudioClip> effectSound;
+
     void Start()
     {
         hpBar.Initalize(maxHP, maxHP);
@@ -25,7 +27,7 @@ public class Player : Character
 
     void Update()
     {
-        //testing health up/down function
+        //testing health up/down function. remove before build
         if (Input.GetKeyDown(KeyCode.I))
         {
             PlayerDamaged(10);
@@ -49,6 +51,7 @@ public class Player : Character
         //    return;
         //isHurt = true;
 
+        MusicManager.instance.SFXPlay("playerDamaged", effectSound[0]);
         Debug.Log("Player Damaged");
         hpBar.thisCurrentValue -= damage;
         if (hpBar.thisCurrentValue < 0)
@@ -62,6 +65,7 @@ public class Player : Character
 
     public void PlayerRecovered(int recovered)
     {
+        MusicManager.instance.SFXPlay("playerRecovered", effectSound[1]);
         Debug.Log("Player Recovered");
         hpBar.thisCurrentValue += recovered;
     }
