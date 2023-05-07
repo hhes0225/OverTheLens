@@ -117,8 +117,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTrashable: 1
   thisName: Shield
-  thisDescription: Damage shield
-  thisFunctionality: Thanks to your shield you will have less damage
+  thisDescription: +15 health
+  thisFunctionality: You gain some health
   isConsumable: 0
   healthEffect: 15
   isQuickSlottable: 0
