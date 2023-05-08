@@ -1,5 +1,7 @@
 using Script.Inventory;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace Script.GameScripts
 {
@@ -12,10 +14,19 @@ namespace Script.GameScripts
         private float _xRotation;   // red axes : look down / up
         private float _yRotation;   // green axes : look right / left
 
+        private GraphicRaycaster m_Raycaster;
+        private PointerEventData m_PointerEventData;
+        private EventSystem m_EventSystem;
+
         private void Start()
         {
             // Locking the cursor to the middle of the screen and making it invisible
             Cursor.lockState = CursorLockMode.Locked;
+
+            // GraphicRaycaster object create
+            m_Raycaster = GetComponent<GraphicRaycaster>();
+            // EventSystem object
+            m_EventSystem = GetComponent<EventSystem>();
         }
 
         private void Update()
@@ -40,9 +51,11 @@ namespace Script.GameScripts
                 if (Input.GetKey(KeyCode.Escape))
                 {
                     Cursor.lockState = CursorLockMode.None;
+                    
                 }
+
             }
-            
+
         }
     }
 }

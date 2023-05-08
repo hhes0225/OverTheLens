@@ -28,12 +28,13 @@ public class GameClearManager: MonoBehaviour
     private void Awake()
     {
         fadeEffectPanel.SetActive(true);
+        
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.None;
+        
         restartButton.onClick.AddListener((restartButtonEvent));
         goTitleButton.onClick.AddListener((goTitleButtonEvent));
         StartCoroutine(IntroSceneCoroutine());

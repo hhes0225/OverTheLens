@@ -23,13 +23,19 @@ public class SubUIManager : MonoBehaviour
 
     [SerializeField]
     private GameObject fadeEffectPanel;
-    
+
     [SerializeField]
     private GameObject toggleAWSD;
-    
+
     [SerializeField]
     private GameObject toggleZQSD;
-    
+
+    public static SubUIManager instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +53,7 @@ public class SubUIManager : MonoBehaviour
         Time.timeScale = 1;
         settingWindow.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+        UIMananger.instance.uiClick = false;
     }
 
     void resumeButtonEvent()
@@ -54,20 +61,47 @@ public class SubUIManager : MonoBehaviour
         Time.timeScale = 1;
         homeWindow.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+        UIMananger.instance.uiClick = false;
     }
 
     void quitButtonEvent()
     {
         Time.timeScale = 1;
         fadeEffectPanel.GetComponent<TransitionEffect>().FadeOut();
-        Invoke("titleSceneLoader", 1f); 
+        Invoke("titleSceneLoader", 1f);
     }
 
     void titleSceneLoader()
     {
         SceneManager.LoadScene(0);
     }
-    
+
+    public void GameOverEvent()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        fadeEffectPanel.GetComponent<TransitionEffect>().FadeOut();
+        Invoke("gameOverSceneLoader", 1f);
+    }
+
+    public void GameClearEvent()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        fadeEffectPanel.GetComponent<TransitionEffect>().FadeOut();
+        Invoke("gameClearSceneLoader", 1f);
+    }
+
+    void gameOverSceneLoader()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    void gameClearSceneLoader()
+    {
+        SceneManager.LoadScene(4);
+    }
+
     void toggleAWSDEvent(bool isOn)
     {
         if (isOn)
@@ -76,7 +110,7 @@ public class SubUIManager : MonoBehaviour
             toggleAWSD.GetComponent<Toggle>().isOn = true;
         }
     }
-    
+
     void toggleZQSDEvent(bool isOn)
     {
         if (isOn)

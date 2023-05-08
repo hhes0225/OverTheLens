@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 3049877109053845706}
   m_Layer: 0
   m_Name: sword_shield_gold
-  m_TagString: Untagged
+  m_TagString: Equip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

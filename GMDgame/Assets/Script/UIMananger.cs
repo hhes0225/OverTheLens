@@ -22,8 +22,14 @@ public class UIMananger : MonoBehaviour
     [SerializeField]
     private GameObject fadeEffectPanel;
 
+    public bool uiClick = false;
+
+    public static UIMananger instance;
+
     private void Awake()
     {
+        instance = this;
+
         //to initialize time(not paused)
         Time.timeScale = 1;
         //To apply the volume setting
@@ -43,9 +49,23 @@ public class UIMananger : MonoBehaviour
         homeButton.onClick.AddListener((homeButtonEvent));
     }
 
+    private void Update()
+    {
+        if (Cursor.lockState == CursorLockMode.None && Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            //Debug.Log(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject);
+            if(UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject() == false)
+                Cursor.lockState = CursorLockMode.Locked;
+
+        }
+    }
 
     void settingButtonEvent()
     {
+        uiClick = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         Debug.Log("setting button clicked");
         Time.timeScale = 0;         //if player click UI button, then game will be paused 
         settingWindow.SetActive(true);
@@ -53,6 +73,12 @@ public class UIMananger : MonoBehaviour
 
     void homeButtonEvent()
     {
+        uiClick = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Time.timeScale = 0;         //if player click UI button, then game will be paused 
         homeWindow.SetActive(true);
     }

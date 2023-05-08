@@ -11,7 +11,7 @@ namespace Script.Inventory
         // -- UI -- //
         public GameObject quickSlotsPanel;
  
-        public List<GameObject> quickSlotsList = new List<GameObject>();
+        public List<GameObject> quickSlotsList = new List<GameObject>() { null, null, null, null, null };
 
         public int selectedSlot = -1;
         public GameObject selectedItem;
@@ -57,13 +57,15 @@ namespace Script.Inventory
                 SelectQuickSlot(5);
             }
         }
-        
+
         void SelectQuickSlot(int slot)
         {
+           
             if (CheckIfSlotIsFull(slot))
             {
                 if (selectedSlot != slot)
                 {
+                    Debug.Log((selectedSlot != slot) + ": result");
                     selectedSlot = slot;
 
                     // Unselect previous item
@@ -71,14 +73,17 @@ namespace Script.Inventory
                     {
                         selectedItem.gameObject.GetComponent<InventoryItem>().isSelected = false;
                     }
+                   
 
                     selectedItem = GetSelectedItem(slot);
                     selectedItem.GetComponent<InventoryItem>().isSelected = true;
+                    Debug.Log("item consumed");
+                    selectedItem.GetComponent<InventoryItem>().ConsumeFood();
                 }
                 else    // If we click on the same slot
                 {
                     selectedSlot = -1; // null
-                    
+
                     // Unselect previous item
                     if (selectedItem != null)
                     {
@@ -88,7 +93,9 @@ namespace Script.Inventory
                 }
             }
         }
+
         
+
         GameObject GetSelectedItem(int slot)
         {
             return quickSlotsList[slot-1].transform.GetChild(0).gameObject;
@@ -161,4 +168,37 @@ namespace Script.Inventory
             InventorySystem.Instance.ReCalculateList();
         }
     }
+
+    //void SelectQuickSlot(int slot)
+    //{
+    //    Debug.Log("Äü½½·Ô function called");
+    //    if (CheckIfSlotIsFull(slot))
+    //    {
+    //        if (selectedSlot != slot)
+    //        {
+    //            Debug.Log((selectedSlot != slot) + ": result");
+    //            selectedSlot = slot;
+
+    //            // Unselect previous item
+    //            if (selectedItem != null)
+    //            {
+    //                selectedItem.gameObject.GetComponent<InventoryItem>().isSelected = false;
+    //            }
+
+    //            selectedItem = GetSelectedItem(slot);
+    //            selectedItem.GetComponent<InventoryItem>().isSelected = true;
+    //        }
+    //        else    // If we click on the same slot
+    //        {
+    //            selectedSlot = -1; // null
+
+    //            // Unselect previous item
+    //            if (selectedItem != null)
+    //            {
+    //                selectedItem.gameObject.GetComponent<InventoryItem>().isSelected = false;
+    //                selectedItem = null;
+    //            }
+    //        }
+    //    }
+    //}
 }

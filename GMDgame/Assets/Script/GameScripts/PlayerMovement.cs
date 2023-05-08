@@ -20,11 +20,11 @@ namespace Script.GameScripts
         private bool _isGrounded;
 
         AudioSource audiosrc;
-        public AudioClip clip;
         bool isMoving = false;
 
         public GameObject toggleAWSD;
         public GameObject toggleZQSD;
+        public AudioClip jumpSound;
 
 
         private void Start()
@@ -73,9 +73,10 @@ namespace Script.GameScripts
 
             if (isMoving)
             {
-                if (!audiosrc.isPlaying)
+                if (!audiosrc.isPlaying) { 
                     audiosrc.Play();
-                //MusicManager.instance.SFXPlay("Walk", clip);
+                }
+
             }
             else {
                 audiosrc.Stop();
@@ -88,6 +89,8 @@ namespace Script.GameScripts
             {
                 //the equation for jumping
                 _velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+
+                MusicManager.instance.SFXPlay("jumpSound", jumpSound);
             }
  
             _velocity.y += gravity * Time.deltaTime;

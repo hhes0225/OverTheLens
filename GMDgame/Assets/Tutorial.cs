@@ -17,7 +17,7 @@ public class Tutorial : MonoBehaviour
             b.interactable = false;
         }
 
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
     }
 
     void ChangeAnimation()
