@@ -24542,7 +24542,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b0a00d5c9d86d4479fe153f42592d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   buttonActionGauge: {fileID: 854746097}
   maxValue: 100
 --- !u!1001 &2004174046
@@ -24619,10 +24618,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4260712248659418329, guid: 1749b3d011ffe0748b66b6f0e20aa8dd, type: 3}
   m_PrefabInstance: {fileID: 2004174046}
   m_PrefabAsset: {fileID: 0}
-=======
-  buttonActionGauge: {fileID: 128589364}
-  maxValue: 2
->>>>>>> Stashed changes
 --- !u!1 &2008344954
 GameObject:
   m_ObjectHideFlags: 0
