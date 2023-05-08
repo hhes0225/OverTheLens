@@ -68,6 +68,6 @@ public class IntroManager : MonoBehaviour
     }
     void nextSceneLoader()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(5);
     }
 }

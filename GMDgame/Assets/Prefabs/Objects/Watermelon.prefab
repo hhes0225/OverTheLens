@@ -67,6 +67,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   itemName: watermelon
+  pickSound: {fileID: 8300000, guid: 48778de98f51bb947bf0ac3036b87023, type: 3}
 --- !u!65 &6031759390415475638
 BoxCollider:
   m_ObjectHideFlags: 0
