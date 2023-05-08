@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Script.Character
 {
+    //no longer used
     public class RandomPosition : MonoBehaviour
     {
         public const float TERRAIN_X_MIN = 0;

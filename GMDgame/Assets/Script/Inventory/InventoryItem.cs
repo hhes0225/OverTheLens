@@ -44,6 +44,8 @@ namespace Script.Inventory
         
         void Update()
         {
+            
+
             if (isSelected)
             {
                 gameObject.GetComponent<DragDrop>().enabled = false;
@@ -52,6 +54,8 @@ namespace Script.Inventory
             {
                 gameObject.GetComponent<DragDrop>().enabled = true;
             }
+
+           
         }
  
         // Triggered when the mouse enters into the area of the item that has this script.
@@ -72,37 +76,79 @@ namespace Script.Inventory
         // Triggered when the mouse is clicked over the item that has this script.
         public void OnPointerDown(PointerEventData eventData)
         {
-            
-            //Left Mouse Button Click on
-            if (eventData.button == PointerEventData.InputButton.Left)
+            if (!this.transform.parent.name.Contains("Quick") && this.transform.tag.Contains("Food"))
             {
-                if (isConsumable)
+                Debug.Log(this.transform.parent.name + ": quick slot register");
+                //Left Mouse Button Click on
+                if (eventData.button == PointerEventData.InputButton.Left)
                 {
-                    // Setting this specific gameobject to be the item we want to destroy later
-                    _itemPendingConsumption = gameObject;
-                    ConsumingFunction(healthEffect);
+                    if (isConsumable)
+                    {
+                        // Setting this specific gameobject to be the item we want to destroy later
+                        _itemPendingConsumption = gameObject;
+                        ConsumingFunction(healthEffect);
+                    }
+                }
+                //Right Mouse Button Click on
+                if (eventData.button == PointerEventData.InputButton.Right)
+                {
+                    if (isQuickSlottable && isQuickSlotted == false && QuickSlotSystem.Instance.CheckIfFull() == false)
+                    {
+                        QuickSlotSystem.Instance.AddToQuickSlot(gameObject);
+                        isQuickSlotted = true;
+                    }
                 }
             }
-            //Right Mouse Button Click on
-            if (eventData.button == PointerEventData.InputButton.Right)
+            else
             {
-                if (isQuickSlottable && isQuickSlotted == false && QuickSlotSystem.Instance.CheckIfFull() == false)
-                {
-                    QuickSlotSystem.Instance.AddToQuickSlot(gameObject);
-                    isQuickSlotted = true;
-                }
+                Debug.Log(this.transform.parent.name + ": item is in quick slot");
+                
             }
         }
  
         // Triggered when the mouse button is released over the item that has this script.
         public void OnPointerUp(PointerEventData eventData)
         {
-            if (eventData.button == PointerEventData.InputButton.Left)
+            if (!this.transform.parent.name.Contains("Quick") && !this.transform.tag.Contains("Equip"))
             {
-                if (isConsumable && _itemPendingConsumption == gameObject)
+                if (eventData.button == PointerEventData.InputButton.Left)
+                {
+                    if (isConsumable && _itemPendingConsumption == gameObject)
+                    {
+                        DestroyImmediate(gameObject);
+                        //InventorySystem.Instance.ReCalculeList();
+                    }
+                }
+            }
+        }
+
+        public void ConsumeFood()
+        {
+            if (isConsumable)
+            {
+                // Setting this specific gameobject to be the item we want to destroy later
+                _itemPendingConsumption = gameObject;
+                ConsumingFunction(healthEffect);
+
+                if (_itemPendingConsumption == gameObject)
                 {
                     DestroyImmediate(gameObject);
-                    //InventorySystem.Instance.ReCalculeList();
+                }
+            }
+        }
+
+        public void ConsumeEquip()
+        {
+            Debug.Log("ConsumeEquip function called isConsumable:" + isConsumable);
+            if (isConsumable)
+            {
+                Debug.Log("if isconsumable true");
+                // Setting this specific gameobject to be the item we want to destroy later
+                _itemPendingConsumption = gameObject;
+                
+                if (_itemPendingConsumption == gameObject)
+                {
+                    Destroy(gameObject);
                 }
             }
         }

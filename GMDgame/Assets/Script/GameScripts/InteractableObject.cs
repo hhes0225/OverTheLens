@@ -35,10 +35,10 @@ namespace Script.GameScripts
                         Debug.Log("inventory is full!!!!");
                     }
                 }
-                else
+                else//the case that player picks up glasses item(clear condition)
                 {
                     Debug.Log("Clear Game!");
-                    //SubUIManager.instance.GameClaerEvent();
+                    SubUIManager.instance.GameClearEvent();
                 }
             }
         }

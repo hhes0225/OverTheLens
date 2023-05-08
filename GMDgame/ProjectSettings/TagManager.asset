@@ -7,6 +7,10 @@ TagManager:
   - Music
   - Slot
   - QuickSlot
+  - Equip
+  - Potion
+  - Liquor
+  - Food
   layers:
   - Default
   - TransparentFX

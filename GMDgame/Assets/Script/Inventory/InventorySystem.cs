@@ -82,6 +82,10 @@ namespace Script.Inventory
                 SelectionManager.Instance.EnableSelection();
                 SelectionManager.Instance.GetComponent<SelectionManager>().enabled = true;
             }
+            else if (Input.GetKeyDown(KeyCode.H))
+            {
+                EquipAutoUse();
+            }
         }
 
         public void AddToInv(string ItemName)
@@ -159,5 +163,36 @@ namespace Script.Inventory
                 }
             }
         }
+
+        public bool isThereEquip()
+        {
+            foreach (GameObject slot in slotList)
+            {
+                
+                if (slot.transform.childCount>0 && slot.transform.GetChild(0).tag.Contains("Equip"))
+                {
+                    Debug.Log("equip is there");
+                    return true;
+                }
+            }
+
+            Debug.Log("equip is not exist");
+            return false;
+        }
+
+        public void EquipAutoUse()
+        {
+            foreach (GameObject slot in slotList)
+            {
+                if (slot.transform.childCount > 0 && slot.transform.GetChild(0).tag.Contains("Equip"))
+                {
+                    Debug.Log(slot.transform.GetChild(0).name);
+                    slot.transform.GetChild(0).GetComponent<InventoryItem>().ConsumeEquip();
+                    return;
+                }
+            }
+        }
     }
+
+    
 }

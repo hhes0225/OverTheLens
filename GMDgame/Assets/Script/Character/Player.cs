@@ -98,7 +98,7 @@ public class Player : Character
         yield return new WaitForSeconds(2.0f);
 
         //load gameover scene
-        //SubUIManager.instance.GameOverEvent();
+        SubUIManager.instance.GameOverEvent();
         yield return null;
     }
 
