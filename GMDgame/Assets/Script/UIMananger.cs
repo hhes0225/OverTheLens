@@ -87,4 +87,5 @@ public class UIMananger : MonoBehaviour
     {
         settingWindow.SetActive(false);
     }
+
 }
