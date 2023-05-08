@@ -25,6 +25,10 @@ namespace Script.Inventory
         public bool isConsumable;
 
         public float healthEffect;
+
+        // --- Approach to Glasses Event --- //
+        TimerGlassesEventController eventTimer;
+        GlassesEventTrigger glassesTrigger;
         
         
         // --- Quick Slot --- //
@@ -36,6 +40,7 @@ namespace Script.Inventory
         
         private void Start()
         {
+            eventTimer = GameObject.Find("TimerGlassesEventSlider").GetComponent<TimerGlassesEventController>();
             _itemInfoUI = InventorySystem.Instance.ItemInfoUI;
             _itemInfoUIItemName = _itemInfoUI.transform.Find("ItemName").GetComponent<TextMeshProUGUI>();
             _itemInfoUIItemDescription = _itemInfoUI.transform.Find("ItemDescription").GetComponent<TextMeshProUGUI>();
@@ -76,18 +81,12 @@ namespace Script.Inventory
         // Triggered when the mouse is clicked over the item that has this script.
         public void OnPointerDown(PointerEventData eventData)
         {
-            if (!this.transform.parent.name.Contains("Quick") && this.transform.tag.Contains("Food"))
+            if (!this.transform.parent.name.Contains("Quick") && !this.transform.tag.Contains("Equip"))
             {
-                Debug.Log(this.transform.parent.name + ": quick slot register");
                 //Left Mouse Button Click on
                 if (eventData.button == PointerEventData.InputButton.Left)
                 {
-                    if (isConsumable)
-                    {
-                        // Setting this specific gameobject to be the item we want to destroy later
-                        _itemPendingConsumption = gameObject;
-                        ConsumingFunction(healthEffect);
-                    }
+                    ConsumeItemQuickslot();
                 }
                 //Right Mouse Button Click on
                 if (eventData.button == PointerEventData.InputButton.Right)
@@ -122,28 +121,121 @@ namespace Script.Inventory
             }
         }
 
-        public void ConsumeFood()
+        public void ConsumeItemQuickslot()
         {
+            EffectSoundList.instance.playEffectSound(0);
             if (isConsumable)
             {
-                // Setting this specific gameobject to be the item we want to destroy later
-                _itemPendingConsumption = gameObject;
-                ConsumingFunction(healthEffect);
-
-                if (_itemPendingConsumption == gameObject)
+                switch (this.transform.tag)
                 {
-                    DestroyImmediate(gameObject);
+                    //Consume Food
+                    case "Food": ConsumeFood(); break;
+                    //Consume Liquor
+                    case "Liquor": ConsumeFood(); ConsumeLiquor(); break;
+                    //Consume Potion
+                    case "Potion":
+                        if (eventTimer.timerSlider.value < eventTimer.timerSlider.maxValue)
+                        {
+                            Debug.Log("Potion");
+                            if (this.transform.name.Contains("green"))
+                            {
+                                
+                                ConsumeGreenPotion(healthEffect);
+                                
+                            }
+                            else
+                            {
+                                ConsumeBrownPotion(healthEffect);
+                            }
+                        }
+                        break;
+                    default: break;
                 }
             }
+
+            
+        }
+
+        public void DestroyThumbnail()
+        {
+            if (_itemPendingConsumption == gameObject)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        
+
+        public void ConsumeFood()
+        {
+            // Setting this specific gameobject to be the item we want to destroy later
+            _itemPendingConsumption = gameObject;
+            ConsumingFunction(healthEffect);
+        }
+
+        public void ConsumeGreenPotion(float second)
+        {
+            
+            int lucky;
+            lucky = Random.Range(0, 2);//get 0 or 1
+
+            // Setting this specific gameobject to be the item we want to destroy later
+            _itemPendingConsumption = gameObject;
+            _itemInfoUI.SetActive(false);
+
+            if (lucky == 0)//lucky is 0, glasses event gauge will increase
+            {
+                eventTimer.timerSlider.value += second;
+                Debug.Log(second + " second increase");
+         
+            }
+            else//lucky is 1, glasses event gauge will decrease
+            {
+                eventTimer.timerSlider.value -= second;
+                Debug.Log(second + " second decrease");
+                EffectSoundList.instance.playEffectSound(1);
+            }
+
+
+        }
+
+        public void ConsumeBrownPotion(float percent)
+        {
+            
+            int lucky;
+            lucky = Random.Range(0, 100);
+
+            // Setting this specific gameobject to be the item we want to destroy later
+            _itemPendingConsumption = gameObject;
+            _itemInfoUI.SetActive(false);
+
+            if (lucky <= percent)//lucky is smaller than percent, it prevent glasses event for 1 time.
+            {
+                eventTimer.preventEvent = true;
+                Debug.Log(percent + "% of prevent");
+                EffectSoundList.instance.playEffectSound(1);
+            }
+            else//lucky is bigger than percent, it triggers glasses event instantly.
+            {
+                eventTimer.timerSlider.value = eventTimer.timerSlider.maxValue - 0.3f;
+                Debug.Log((100-percent) + "% of triggering instantly");
+            }
+
+        }
+
+        public void ConsumeLiquor()
+        {
+            //Drunk
+            eventTimer.timerSlider.value = eventTimer.timerSlider.maxValue - 0.3f;
+            eventTimer.isDrunk = true;
+
         }
 
         public void ConsumeEquip()
         {
-            Debug.Log("ConsumeEquip function called isConsumable:" + isConsumable);
             if (isConsumable)
             {
-                Debug.Log("if isconsumable true");
-                // Setting this specific gameobject to be the item we want to destroy later
+               // Setting this specific gameobject to be the item we want to destroy later
                 _itemPendingConsumption = gameObject;
                 
                 if (_itemPendingConsumption == gameObject)

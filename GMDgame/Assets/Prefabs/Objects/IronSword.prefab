@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 6158059520051851824}
   - component: {fileID: 6158059520051851821}
   - component: {fileID: 6158059520051851827}
-  - component: {fileID: 7182048702778874270}
+  - component: {fileID: 9127126653081431726}
+  - component: {fileID: 4924067606635794922}
   m_Layer: 0
   m_Name: IronSword
   m_TagString: Equip
@@ -141,19 +142,32 @@ MonoBehaviour:
   playerInRange: 0
   itemName: sword
   pickSound: {fileID: 8300000, guid: 48778de98f51bb947bf0ac3036b87023, type: 3}
---- !u!54 &7182048702778874270
-Rigidbody:
+--- !u!111 &9127126653081431726
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6867927892979862654}
-  serializedVersion: 2
-  m_Mass: 10000000
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: f639c791014c40a419edcbdfbd94d582, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: f639c791014c40a419edcbdfbd94d582, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &4924067606635794922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6867927892979862654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3abfc7198c85ce649bd21dd41e50b870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeed: 10

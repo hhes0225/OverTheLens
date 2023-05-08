@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4728697320476372275}
   m_Layer: 5
   m_Name: bottle_A_brown
-  m_TagString: Food
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,10 +117,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTrashable: 1
   thisName: Bottle A brown
-  thisDescription: +5 health
-  thisFunctionality: You gain some health
+  thisDescription: Small Glasses Potion
+  thisFunctionality: It prevents one glasses event with a low probability. But if
+    it goes wrong, a glasses event occurs immediately.
   isConsumable: 1
-  healthEffect: 5
+  healthEffect: 30
   isQuickSlottable: 1
   isQuickSlotted: 0
   isSelected: 0

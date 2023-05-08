@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4728697320476372275}
   m_Layer: 5
   m_Name: bottle_B_green
-  m_TagString: Food
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,8 +117,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTrashable: 1
   thisName: Bottle B green
-  thisDescription: +10 health
-  thisFunctionality: You gain some health
+  thisDescription: Midium Time Potion
+  thisFunctionality: A 50% chance reduces the glasses gauge by 10 seconds, but a
+    50% chance increases the glasses gauge by 10 seconds.
   isConsumable: 1
   healthEffect: 10
   isQuickSlottable: 1

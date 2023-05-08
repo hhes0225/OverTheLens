@@ -12,7 +12,7 @@ enum EventState
 public class TimerGlassesEventController : MonoBehaviour
 {
     //private Image filledArea;
-    Slider timerSlider;
+    public Slider timerSlider;
 
     [SerializeField]
     private List<float> fSliderBarTime = new List<float>() { 10.0f, 15.0f, 20.0f, 25.0f, 30.0f, 35.0f, 40.0f };
@@ -30,6 +30,8 @@ public class TimerGlassesEventController : MonoBehaviour
     EventState nowState = EventState.Normal;
 
     public AudioClip effectSound;
+    public bool preventEvent = false;
+    public bool isDrunk = false;
 
 void Start()
     {
@@ -37,7 +39,7 @@ void Start()
         //filledArea = GetComponent<Image>();
         timerSlider = this.GetComponent<Slider>();
         glassesEventTrigger.GetComponent<GlassesEventTrigger>();
-        //Debug.Log(buttonActionObj.name + " �Ҵ��");
+
 
         ResetTimer();
     }
@@ -53,7 +55,15 @@ void Start()
             else
             {
                 Debug.Log("count end");
-                StartCoroutine("GlassesEvent");
+                if (preventEvent)
+                {
+                    check = true;
+                    preventEvent = false;
+                    StartCoroutine("ExitEvent");
+                }
+                else { 
+                    StartCoroutine("GlassesEvent");
+                }
             }
         }
         else//nowState==EventState.
@@ -85,7 +95,13 @@ void Start()
         //Debug.Log(MusicManager.instance);
         MusicManager.instance.SFXPlay("glassesEventTrigger", effectSound);
         nowState = EventState.GlassesEvent;
-        check=glassesEventTrigger.GlassesEvent();
+        if(!isDrunk)
+            check=glassesEventTrigger.GlassesEvent();
+        else
+        {
+            glassesEventTrigger.Event4();
+            isDrunk = false;
+        }
         buttonActionObj.SetActive(true);
 
         yield return null;

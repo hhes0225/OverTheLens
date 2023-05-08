@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 7325951922772420929}
   - component: {fileID: 4650756741771298868}
   - component: {fileID: 4238692481152968841}
-  - component: {fileID: 400729281724246151}
+  - component: {fileID: -8911195686925386561}
   m_Layer: 0
   m_Name: Ham
   m_TagString: Untagged
@@ -490,19 +490,19 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!54 &400729281724246151
-Rigidbody:
+--- !u!111 &-8911195686925386561
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399772525997710878}
-  serializedVersion: 2
-  m_Mass: 10000000
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: f639c791014c40a419edcbdfbd94d582, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: f639c791014c40a419edcbdfbd94d582, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

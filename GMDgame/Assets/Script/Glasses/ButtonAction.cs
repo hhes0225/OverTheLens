@@ -13,6 +13,8 @@ public class ButtonAction : MonoBehaviour
 
     bool isX = true;
 
+    public AudioClip hitSound;
+
     private void Start()
     {
         //buttonActionGauge = this.GetComponent<HPbarController>();
@@ -25,6 +27,7 @@ public class ButtonAction : MonoBehaviour
         if (isX) { 
             if (Input.GetKeyDown(KeyCode.X))
             {
+                MusicManager.instance.SFXPlay("hitSound", hitSound);
                 GaugeFilled(2);
                 isX = false;
             }
@@ -33,6 +36,7 @@ public class ButtonAction : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.V))
             {
+                MusicManager.instance.SFXPlay("hitSound", hitSound);
                 GaugeFilled(2);
                 isX = true;
             }

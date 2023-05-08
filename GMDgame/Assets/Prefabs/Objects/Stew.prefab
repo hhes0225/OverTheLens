@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 2641149481171015713}
   - component: {fileID: 1759401702158966679}
   - component: {fileID: 6269657181704400199}
-  - component: {fileID: 6820624505803269988}
+  - component: {fileID: 7455284276477192276}
   m_Layer: 0
   m_Name: Stew
   m_TagString: Untagged
@@ -241,22 +241,22 @@ MonoBehaviour:
   playerInRange: 0
   itemName: stew
   pickSound: {fileID: 8300000, guid: 48778de98f51bb947bf0ac3036b87023, type: 3}
---- !u!54 &6820624505803269988
-Rigidbody:
+--- !u!111 &7455284276477192276
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6819250221261789753}
-  serializedVersion: 2
-  m_Mass: 10000000
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: f639c791014c40a419edcbdfbd94d582, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: f639c791014c40a419edcbdfbd94d582, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &6819450736671586255
 GameObject:
   m_ObjectHideFlags: 0

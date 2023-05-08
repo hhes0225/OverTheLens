@@ -29,15 +29,15 @@ public class Player : Character
 
     void Update()
     {
-        //testing health up/down function. remove before build
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            PlayerDamaged(10);
-        }
-        else if (Input.GetKeyDown(KeyCode.O))
-        {
-            PlayerRecovered(10);
-        }
+        ////testing health up/down function. remove before build
+        //if (Input.GetKeyDown(KeyCode.I))
+        //{
+        //    PlayerDamaged(10);
+        //}
+        //else if (Input.GetKeyDown(KeyCode.O))
+        //{
+        //    PlayerRecovered(10);
+        //}
 
         //check game over state
         if (hpBar.thisCurrentValue == 0 && isDead==false)
@@ -67,10 +67,11 @@ public class Player : Character
 
     public void PlayerRecovered(int recovered)
     {
-        MusicManager.instance.SFXPlay("playerRecovered", effectSound[1]);
+        //MusicManager.instance.SFXPlay("playerRecovered", effectSound[1]);
         Debug.Log("Player Recovered");
         hpBar.thisCurrentValue += recovered;
     }
+
 
     public void setHealth(float health)
     {

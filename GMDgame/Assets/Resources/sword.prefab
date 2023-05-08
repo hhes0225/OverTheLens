@@ -117,8 +117,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTrashable: 1
   thisName: Sword
-  thisDescription: +10 health
-  thisFunctionality: You gain some health
+  thisDescription: Protection
+  thisFunctionality: You will be protected by trap for 1 time. This will be automatically
+    used.
   isConsumable: 1
   healthEffect: 10
   isQuickSlottable: 0
