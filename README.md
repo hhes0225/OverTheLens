@@ -1,48 +1,39 @@
 # theGame
 
-## Project Overview
+## Link to a Youtube video
+Link : 
 
-You must **develop a game** during the semester.
-Your **GMD grade** is based on this project.
-The game must be **developed in groups of 1-4 people**.
-**You decide** what type of game to makeExpected workload: **70 hours per student**
+## Sources of any third party assets/code
 
-## Project Assessment
+## Link to a playable WebGL build of your game hosted on GitHub PagesClick
+We made the game with HDRP, but WebGL is not supported with HDRP.
 
-When we assess your game, we will look at:
+## Recap
 
-- The **scope/ambition** of the game
-- That you can demonstrate **ownership** of the implementation in your reflections
-- That the game covers the **learning goals** of the course
-- That the **source code is well-structured**
-- That the game is fully playable (it doesn’t have to be “bug-free”)
-- That it is **YOUR game** (not simply a copy/paste of a tutorial or a list of downloaded assets from the asset store)
+- [X] **70 hours per student**
+- [X] The **scope/ambition** of the game
+- [X] That you can demonstrate **ownership** of the implementation in your reflections
+- [X] That the game covers the **learning goals** of the course
+- [X] That the **source code is well-structured**
+- [X] That the game is fully playable (it doesn’t have to be “bug-free”)
+- [X] That it is **YOUR game** (not simply a copy/paste of a tutorial or a list of downloaded assets from the asset store)
 
-## Remember to Include...
+- [X] Scripting (e.g. monobehaviours, coroutines, events)
+- [X] Input & Vectors (e.g. input systems, manipulating transforms)
+- [X] Physics (e.g. rigidbodies, colliders, triggers)
+- [X] Graphics & Audio (e.g. models, shaders, audio clips)Animation (e.g. animators, animations)
+- [X] Game Architecture (e.g. game managers, ScriptableObjects, SOLID principles)
+- [X] Game AI (e.g. finite-state machines, navmesh agents, pathfinding algorithms)
+- [X] User Interface (e.g. menus and HUD)
 
-- [ ] Scripting (e.g. monobehaviours, coroutines, events)
-- [ ] Input & Vectors (e.g. input systems, manipulating transforms)
-- [ ] Physics (e.g. rigidbodies, colliders, triggers)
-- [ ] Graphics & Audio (e.g. models, shaders, audio clips)Animation (e.g. animators, animations)
-- [ ] Game Architecture (e.g. game managers, ScriptableObjects, SOLID principles)
-- [ ] Game AI (e.g. finite-state machines, navmesh agents, pathfinding algorithms)
-- [ ] User Interface (e.g. menus and HUD)
+## Handing In (.zip)
 
-## Handing In
+Please find the PDF file in the GitHub repository and on WiseFlow.
 
-A **public link** to the project repository (as pdf file) + copy of **source code** must be **handed in on WISEflow (see deadline on itslearning)**
+## PDF
+- [ ] Public link to the project repository
+- [ ] Part of Elise's reflection
+- [ ] Part of Hui Seon's reflection
 
-- GitHub commits determine contribution
-- Commits pushed after the deadline will not be taken into account.
-
-By the deadline, the README should include:
-
-- A link to a YouTube video demonstration of your game (~2min)
-- Sources of any third party assets/code
-- Optionally, a link to a playable WebGL build of your game, hosted on GitHub PagesClick
-
-## Reflections
-
-In your PDF hand-in, include **~2 pages** (one page is 2400 characters,including spaces) per group member of individual reflections on your contributions to the project.
-
-Being **concrete** and referencing **specific** code sections is highly encouraged (as are using figures and illustrations, but neither code snippets, figures or illustrations count towards the page limit).
+## Source code
+- [ ] a copy of the source code of the project (avoid including temporary files and build artifacts)
