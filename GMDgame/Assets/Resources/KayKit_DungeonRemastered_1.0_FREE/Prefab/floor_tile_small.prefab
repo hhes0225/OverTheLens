@@ -113,3 +113,5 @@ MonoBehaviour:
   DamageRepeatRate: 30
   DamageAmount: 30
   Repeating: 1
+  isProtected: 0
+  protectedSound: {fileID: 8300000, guid: 18902072fd1996d45a05160bd07d1322, type: 3}

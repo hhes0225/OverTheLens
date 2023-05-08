@@ -18,6 +18,8 @@ public class GameOverManager : MonoBehaviour
     private void Awake()
     {
         fadeEffectPanel.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     // Start is called before the first frame update

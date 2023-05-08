@@ -45,6 +45,7 @@ namespace Script.Trap
                     else //player have equip
                     {
                         //Debug.Log("Trap - Player protected");
+                        MusicManager.instance.SFXPlay("protectedSound", protectedSound);
                         InventorySystem.Instance.EquipAutoUse();
                     }
                 }
@@ -64,6 +65,7 @@ namespace Script.Trap
                 else //player have equip
                 {
                     //Debug.Log("Trap - Player protected");
+                    MusicManager.instance.SFXPlay("protectedSound", protectedSound);
                     InventorySystem.Instance.EquipAutoUse();
                     yield return null;
                 }

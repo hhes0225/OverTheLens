@@ -82,10 +82,7 @@ namespace Script.Inventory
                 SelectionManager.Instance.EnableSelection();
                 SelectionManager.Instance.GetComponent<SelectionManager>().enabled = true;
             }
-            else if (Input.GetKeyDown(KeyCode.H))
-            {
-                EquipAutoUse();
-            }
+            
         }
 
         public void AddToInv(string ItemName)

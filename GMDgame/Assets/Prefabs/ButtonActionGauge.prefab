@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2963590587673094242}
   - component: {fileID: 2963590587673094241}
+  - component: {fileID: 6758644282198417417}
   m_Layer: 5
   m_Name: ButtonActionGauge
   m_TagString: Untagged
@@ -90,6 +91,21 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6758644282198417417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2963590587673094243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b0a00d5c9d86d4479fe153f42592d07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonActionGauge: {fileID: 1222906944135120588}
+  maxValue: 60
+  hitSound: {fileID: 8300000, guid: e35f2e05f78935f4786eaf1e3e6e1038, type: 3}
 --- !u!1 &2963590588261910705
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +154,7 @@ GameObject:
   - component: {fileID: 2963590588286501908}
   - component: {fileID: 2963590588286501906}
   - component: {fileID: 2963590588286501907}
+  - component: {fileID: 1222906944135120588}
   m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
@@ -203,6 +220,20 @@ MonoBehaviour:
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1222906944135120588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2963590588286501909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8943b7074ce2e44a8564b0ac6269e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lerpSpeed: 15
+  currentValue: 0
 --- !u!1 &2963590588668938606
 GameObject:
   m_ObjectHideFlags: 0

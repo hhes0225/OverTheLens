@@ -28,6 +28,8 @@ public class GameClearManager: MonoBehaviour
     private void Awake()
     {
         fadeEffectPanel.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         
     }
 

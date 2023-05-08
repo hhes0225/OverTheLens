@@ -114,6 +114,8 @@ MonoBehaviour:
   DamageRepeatRate: 10
   DamageAmount: 10
   Repeating: 0
+  isProtected: 0
+  protectedSound: {fileID: 8300000, guid: 18902072fd1996d45a05160bd07d1322, type: 3}
 --- !u!1 &6878991398595145329
 GameObject:
   m_ObjectHideFlags: 0

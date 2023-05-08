@@ -100,6 +100,8 @@ MonoBehaviour:
   DamageRepeatRate: 100
   DamageAmount: 100
   Repeating: 1
+  isProtected: 0
+  protectedSound: {fileID: 8300000, guid: 18902072fd1996d45a05160bd07d1322, type: 3}
 --- !u!65 &-8894592747271582807
 BoxCollider:
   m_ObjectHideFlags: 0

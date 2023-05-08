@@ -78,7 +78,8 @@ namespace Script.Inventory
                     selectedItem = GetSelectedItem(slot);
                     selectedItem.GetComponent<InventoryItem>().isSelected = true;
                     Debug.Log("item consumed");
-                    selectedItem.GetComponent<InventoryItem>().ConsumeFood();
+                    selectedItem.GetComponent<InventoryItem>().ConsumeItemQuickslot();
+                    selectedItem.GetComponent<InventoryItem>().DestroyThumbnail();
                 }
                 else    // If we click on the same slot
                 {

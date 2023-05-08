@@ -20,6 +20,7 @@ namespace Script.GameScripts
 
         private void Update()
         {
+
             if (Input.GetKeyDown(KeyCode.Mouse0) && playerInRange && SelectionManager.Instance.onTarget)
             {
                 MusicManager.instance.SFXPlay("pickSound", pickSound);

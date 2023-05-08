@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4728697320476372275}
   m_Layer: 5
   m_Name: winejug
-  m_TagString: Food
+  m_TagString: Liquor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,10 +117,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTrashable: 1
   thisName: Winejug
-  thisDescription: +2 health
-  thisFunctionality: You gain some health
+  thisDescription: +20 health
+  thisFunctionality: You gain big health. But watch out for heavy drinking!
   isConsumable: 1
-  healthEffect: 2
+  healthEffect: 20
   isQuickSlottable: 1
   isQuickSlotted: 0
   isSelected: 0
