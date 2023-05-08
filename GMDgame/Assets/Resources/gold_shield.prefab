@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4728697320476372275}
   m_Layer: 5
   m_Name: gold_shield
-  m_TagString: Untagged
+  m_TagString: Equip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
   thisName: Gold shield
   thisDescription: +15 health
   thisFunctionality: You gain some health
-  isConsumable: 0
+  isConsumable: 1
   healthEffect: 15
   isQuickSlottable: 0
   isQuickSlotted: 0

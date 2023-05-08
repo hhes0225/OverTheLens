@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using Script.Inventory;
 
 namespace Script.Trap
 {
@@ -13,6 +14,11 @@ namespace Script.Trap
         public int DamageAmount = 1;
 
         public bool Repeating = true;
+
+        public bool isProtected = false;
+
+        public AudioClip protectedSound;
+
 
         private void OnTriggerEnter(Collider other)
         {
@@ -31,8 +37,16 @@ namespace Script.Trap
                 }
                 else
                 {
-                    // Just one time damage
-                    player.PlayerDamaged(DamageAmount);
+                    if (!InventorySystem.Instance.isThereEquip()) { //player don't have equip(sword, shield)
+                        // Just one time damage
+                        //Debug.Log("Trap - Player damaged");
+                        player.PlayerDamaged(DamageAmount);
+                    }
+                    else //player have equip
+                    {
+                        //Debug.Log("Trap - Player protected");
+                        InventorySystem.Instance.EquipAutoUse();
+                    }
                 }
             }
         }
@@ -41,7 +55,19 @@ namespace Script.Trap
         {
             while (_isCausingDamage)
             {
-                player.PlayerDamaged(DamageAmount);
+                if (!InventorySystem.Instance.isThereEquip())
+                { //player don't have equip(sword, shield)
+                  // Just one time damage
+                  //Debug.Log("Trap - Player damaged");
+                    player.PlayerDamaged(DamageAmount);
+                }
+                else //player have equip
+                {
+                    //Debug.Log("Trap - Player protected");
+                    InventorySystem.Instance.EquipAutoUse();
+                    yield return null;
+                }
+
                 TakeDamage(player, repeatRate);
                 yield return new WaitForSeconds(repeatRate);
             }
@@ -55,5 +81,7 @@ namespace Script.Trap
                 _isCausingDamage = false;
             }
         }
+
+        
     }
 }
