@@ -3,6 +3,10 @@
 ## Link to a Youtube video
 Link : https://youtu.be/AuVFL98L6eU 
 
+## Link to Notion workplace
+- Task List : https://shimmer-couch-aba.notion.site/ed3acdb21d444828ba88f0d1026d5962?v=5d4315b0c1fe42419c3508ee94ff52d6
+- Work Archive : https://shimmer-couch-aba.notion.site/b7c72bbd92184f8295e07ded0eb315e3?v=185445ba44f446bb96abb9ffcb8003f4
+
 ## Sources of any third party assets/code
 - Art Resources:
 https://kaylousberg.itch.io/kaykit-dungeon-remastered?download
