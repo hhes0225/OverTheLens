@@ -1,7 +1,7 @@
 # theGame
 
 ## Link to a Youtube video
-Link : 
+Link : https://youtu.be/AuVFL98L6eU 
 
 ## Sources of any third party assets/code
 
@@ -31,8 +31,8 @@ We made the game with HDRP, but WebGL is not supported with HDRP.
 Please find the PDF file in the GitHub repository and on WiseFlow.
 
 ## PDF
-- [ ] Public link to the project repository
-- [ ] Part of Elise's reflection
+- [X] Public link to the project repository
+- [X] Part of Elise's reflection
 - [ ] Part of Hui Seon's reflection
 
 ## Source code
