@@ -64,6 +64,11 @@ https://pixabay.com/sound-effects/
   - check if it is UI when click display
     https://stuban.tistory.com/103
     https://timeboxstory.tistory.com/85
+  
+  - rigidbody
+    https://docs.unity3d.com/ScriptReference/Rigidbody-isKinematic.html   
+    https://musik123.tistory.com/374
+    https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=nanzz200x&logNo=220791347993
 
 ## Link to a playable WebGL build of your game hosted on GitHub PagesClick
 We made the game with HDRP, but WebGL is not supported with HDRP.
