@@ -51,7 +51,6 @@ public class GameClearManager: MonoBehaviour
         {
 
             fadeEffectPanel.GetComponent<TransitionEffect>().FadeOut();
-            //Debug.Log(imagePath[i]);
             cutSceneImage.sprite = Resources.Load<Sprite>(imagePath[i]) as Sprite;
             i++;
             fadeEffectPanel.GetComponent<TransitionEffect>().FadeIn();
