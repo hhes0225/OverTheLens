@@ -73,6 +73,42 @@ https://pixabay.com/sound-effects/
     https://docs.unity3d.com/ScriptReference/Rigidbody-isKinematic.html   
     https://musik123.tistory.com/374
     https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=nanzz200x&logNo=220791347993
+    
+  - URP->HDRP
+    https://makeyourgame.fun/tutoriel/jeux-videos/Unity/unity-hdrp-reparer-material-rose-arbres-speedtree
+    
+  - tutorial
+    https://www.youtube.com/watch?v=Deuf1H5Wu1E
+    
+  - input
+    https://www.youtube.com/watch?v=TzlN0Rqf6jE
+    https://www.youtube.com/watch?v=HkmP7raUYi0
+    
+  - random spawn
+    https://www.youtube.com/watch?v=YHkIIhjelFs
+    https://www.youtube.com/watch?v=IbiwNnOv5So
+    https://www.youtube.com/watch?v=kTvBRkPTvRY
+    https://gamedev.stackexchange.com/questions/204294/how-can-i-make-objects-spawn-at-random-positions-on-the-terrain
+    https://www.youtube.com/watch?v=bR9ukEQdM2w
+    https://www.youtube.com/watch?v=gfD8S32xzYI
+    https://www.youtube.com/watch?v=6jJ6T8M_DcM
+  
+  - player mouvement
+    https://youtu.be/Nxg0vQk05os
+  
+  - Youtube Video
+    https://support.google.com/youtube/answer/57407?hl=fr&co=GENIE.Platform%3DDesktop
+    
+  - Open/Close Panel
+    https://www.youtube.com/watch?v=-thLZco9wJA
+    
+  - Trap
+    https://www.youtube.com/watch?v=guchbhdWP3I
+    https://www.youtube.com/watch?v=L2qJNZr2A_I
+    https://www.youtube.com/watch?v=Y6_dwqz5Yzg
+    https://www.youtube.com/watch?v=LIPI9FbRA1U
+  
+  - 
 
 ## Link to a playable WebGL build of your game hosted on GitHub PagesClick
 We made the game with HDRP, but WebGL is not supported with HDRP.
@@ -102,7 +138,7 @@ Please find the PDF file in the GitHub repository and on WiseFlow.
 ## PDF
 - [X] Public link to the project repository
 - [X] Part of Elise's reflection
-- [ ] Part of Hui Seon's reflection
+- [X] Part of Hui Seon's reflection
 
 ## Source code
-- [ ] a copy of the source code of the project (avoid including temporary files and build artifacts)
+- [X] a copy of the source code of the project (avoid including temporary files and build artifacts)
