@@ -16,7 +16,7 @@ public class GameClearManager: MonoBehaviour
     private Button nextButton;
 
     int i;
-    private string[] imagePath = { "Intro/cut1", "Intro/cut2", "Intro/cut3", "Intro/cut4", "Intro/cut5", "Intro/cut6", "Intro/cut7", "Intro/cut8", "Intro/cut9" };
+    private string[] imagePath = { "GameClear/cut1", "GameClear/cut2", "GameClear/cut3", "GameClear/cut4", "GameClear/cut5" };
 
     [SerializeField]
     private Button restartButton;
