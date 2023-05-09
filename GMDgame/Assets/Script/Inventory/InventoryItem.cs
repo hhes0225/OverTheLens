@@ -86,7 +86,7 @@ namespace Script.Inventory
                 //Left Mouse Button Click on
                 if (eventData.button == PointerEventData.InputButton.Left)
                 {
-                    ConsumeItemQuickslot();
+                    ConsumeItem();
                 }
                 //Right Mouse Button Click on
                 if (eventData.button == PointerEventData.InputButton.Right)
@@ -121,7 +121,7 @@ namespace Script.Inventory
             }
         }
 
-        public void ConsumeItemQuickslot()
+        public void ConsumeItem()
         {
             EffectSoundList.instance.playEffectSound(0);
             if (isConsumable)
