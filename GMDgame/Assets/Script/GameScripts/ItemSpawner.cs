@@ -11,7 +11,6 @@ public class ItemSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-
         for (int i = 0; i < 1000; i++)
         {
             int randomIndex = Random.Range(0, spawnObjects.Count);
@@ -23,6 +22,8 @@ public class ItemSpawner : MonoBehaviour
             randomPosition.y = Terrain.activeTerrain.SampleHeight(randomPosition) + Terrain.activeTerrain.GetPosition().y;
             // you probably want to create the object a little above the terrain:
             randomPosition.y += 1f; // move position 0.5 above the terrain
+
+            //Instantiate(spawnObjects[randomIndex], randomPosition, Quaternion.identity);
 
             // Gets the orientation vector of the terrain and sets the orientation of the object to instantiate
             Vector3 normal = Terrain.activeTerrain.terrainData.GetInterpolatedNormal(randomPosition.x / Terrain.activeTerrain.terrainData.size.x, randomPosition.z / Terrain.activeTerrain.terrainData.size.z);
